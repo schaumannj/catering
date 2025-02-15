@@ -77,6 +77,7 @@ body {
 a {
 	color:#7f7f7f;
 	outline:none;
+
 }
 a:hover {
 	text-decoration:none;
@@ -95,6 +96,8 @@ a:hover {
 	text-align: left; 
 	
   }
+
+
 
 .row-top main {
 	displey: flex;
@@ -224,6 +227,7 @@ p {
 }
 .menu li a, .list-1 li a, .link, .button-1, .button-2, h1 a {
 	text-decoration:none;
+	
 }
 /*********************************header*************************************/
 header {
@@ -271,17 +275,20 @@ h2 span {
 	padding:26px 10px 0 0;
 	float:right;
 	display: flex;
+	margin-top: 20px;
 }
 .menu li {
 	float:left;
 	padding-left:40px;
 	margin: 0 20px;
+	
 }
 .menu li a {
 	font-size:14px;
 	line-height:18px;
 	padding:0;
 	color:#fff;
+	font-size: 25px;
 }
 .menu li a.active, .menu > li > a:hover {
 	color:#c52e02;
