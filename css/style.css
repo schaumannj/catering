@@ -71,9 +71,22 @@ a:hover {
 	float:left;
 }
 
+.logo {
+	width: 100 %;  
+	height: 200px;
+	float: left;  
+  }
+
+.row-top {
+	text-align: left; 
+	
+  }
+
 .wrapper {
-	width:100%;
-	overflow:hidden;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    
 }
 .extra-wrap {
 	overflow:hidden;
