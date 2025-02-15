@@ -523,6 +523,7 @@ h6 {
 .text-1 {
 	font-size:14px;
 }
+
 dl span {
 	float:left;
 	width:96px;
@@ -712,6 +713,9 @@ footer .main {
 }
 .handwriting {
 	font-family: scrgunny;
+}
+h3.handwriting {
+	font-size: 36px;
 }
 .header2 {
 	font-size: 80px;
