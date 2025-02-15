@@ -64,6 +64,7 @@ a:hover {
 .col-1, .col-2, .column-1, .column-2 {
 	float:left;
 }
+
 .wrapper {
 	width:100%;
 	overflow:hidden;
@@ -124,10 +125,20 @@ p {
 .color-3 {
 	color:#769e02 !important;
 }
-.img-border {
-	border:10px solid #fff;
+
+
+.col-1 {
+    width: 62px;
+    height: 20px;
 }
-/*********************************boxes**********************************/
+
+
+.img-border{
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+	border-radius: 25px 25px 25px 25px;
+}
 .indent {
 	padding:20px;
 }
