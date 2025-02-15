@@ -26,6 +26,7 @@ mark, rp, rt, ruby, summary, time {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	
   }
 html {
 	width:100%;
@@ -105,16 +106,31 @@ a:hover {
 
   }
 
-  .wrapper {
+  .wrapper{
 	width: 100%;    
 	display: flex;  
 	text-align: center;
 	padding: 0 20px;
 	justify-content: center;
 	
+	position: relative;
+	
   }
+
+  .img-bottom{
+	   
+	display: flex;  
+	text-align: center;
+	padding: 0 20px;
+	justify-content: center;
+	margin-right: ;
+	position: relative;
+	margin-right: 200px;
+	
+  }
+
 .extra-wrap {
-	overflow:hidden;
+	overflow: hidden;
 }
 .clear {
 	clear: both;
@@ -126,12 +142,16 @@ a:hover {
 }
 p {
 	margin-bottom:18px;
+	text-align: justify;
 }
 .p1 {
 	margin-bottom:8px;
+	text-align: justify;
 }
 .p2 {
 	margin-bottom:15px;
+	font-size: 20px;
+	text-align: justify;
 }
 .p3 {
 	margin-bottom:30px;
@@ -178,17 +198,22 @@ p {
 
 
 .img-border{
-    width: 200px; 
-    height: 200px; 
+    width: 250px; 
+    height: 250px; 
     object-fit: cover; 
 	border-radius: 25px 25px 25px 25px;
 }
 .indent {
 	padding:20px;
+	
+	
 }
 .indent-left {
-	padding-left:10px;
-}
+	
+		padding-left: 10px;  
+	}
+	
+
 .indent-right {
 	padding-right:50px;
 }
@@ -228,6 +253,10 @@ p {
 .menu li a, .list-1 li a, .link, .button-1, .button-2, h1 a {
 	text-decoration:none;
 	
+}
+
+.li{
+	font-size: 15px;
 }
 /*********************************header*************************************/
 header {
@@ -296,19 +325,23 @@ h2 span {
 .row-bot {
 	width:100%;
 	background:url(../images/row-bot-tail.gif) center top repeat-x;
+	border-color: #6a8125;
 }
 .row-bot-bg {
 	width:100%;
 	min-height:122px;
-	background:url(../images/row-bot-bg.jpg) center top no-repeat;
+	background:url(../images/row-bot-bg.jpg) center top no-repeat ;
+	
+
 }
 /***** slider *****/
 .slider-wrapper {
 	width:940px;
 	height:466px;
 	padding:10px;
-	background:#fff;
+	background:white;
 	overflow:hidden;
+	
 }
 .slider {
 	width:940px;
@@ -398,11 +431,18 @@ h6 {
 }
 .button-2:hover {
 	background:#779f02;
+	
+}
+
+.li{
+	list-style-type: none;
 }
 .list-1 li {
 	line-height:18px;
 	padding:6px 0 6px 20px;
 	background:url(../images/marker-1.png) 0 12px no-repeat;
+	font-size: 20px;
+	list-style-type: none;
 }
 .list-1 a {
 	display:inline-block;
@@ -682,3 +722,4 @@ footer .main {
 .center {
 	text-align: center;
   }
+  
