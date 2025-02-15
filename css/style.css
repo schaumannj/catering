@@ -3,6 +3,11 @@
     src: url("Autography.otf") format("opentype");
 }
 
+@font-face {
+	font-family: GothamNarrow;
+	src: url("GothamNarrow-Book.otf") format("truetype");
+}
+
 /* Getting the new tags to behave */
 article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {
 	display:block;
@@ -15,7 +20,7 @@ html {
 	width:100%;
 }
 body {
-	font-family:Autography;
+	font-family:GothamNarrow;
 	font-size:100%;
 	color:#7f7f7f;
 	min-width:960px;
