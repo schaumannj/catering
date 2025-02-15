@@ -629,3 +629,12 @@ footer .main {
 .handwriting {
 	font-family: scrgunny;
 }
+.header2 {
+	font-size: 80px;
+	color: #ededed;
+	padding: 30px;
+	margin: 10px;
+}
+.center {
+	text-align: center;
+  }
