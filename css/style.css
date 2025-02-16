@@ -463,6 +463,9 @@ h6 {
 .list-2 {
 	width:270px;
 }
+.list-2 li label {
+	font-weight: bold;
+}
 .list-2 dt {
 	font-weight:bold;
 	margin-bottom:5px;
