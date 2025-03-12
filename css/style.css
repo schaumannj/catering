@@ -101,7 +101,7 @@ a:hover {
 
 
 .row-top main {
-	displey: flex;
+display: flex;
 	margin: 0 auto;
 
   }
@@ -123,7 +123,7 @@ a:hover {
 	text-align: center;
 	padding: 0 20px;
 	justify-content: center;
-	margin-right: ;
+	margin-right: 0 auto;
 	position: relative;
 	margin-right: 200px;
 	
@@ -742,3 +742,88 @@ h3.handwriting {
 	text-align: center;
   }
   
+ /* Skrytí submenu */
+ .menu .submenu {
+    display: flex;  /* Skryje submenu po načtení */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Zarovná texty vertikálně */
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #b78a8a;
+    top: 100%;
+	left: 70%;
+    transform: translateX(-50%); /* Zarovná submenu na střed pod hlavní položkou */
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+  
+  /* Zarovnání submenu a animace */
+  .menu .dropdown:hover > .submenu {
+	display: block;
+	animation: slideDown 0.3s ease-out;
+  }
+  
+  /* Animace pro vyjetí submenu */
+  @keyframes slideDown {
+	0% { transform: translateY(-10px); opacity: 0; }
+	100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  /* Styl pro odkazy v submenu */
+  .menu .submenu li {
+	list-style: none;
+	padding: 10px;
+	border-bottom: 1px solid #030801; /* Tenká šedá čára mezi položkami */
+    padding: 10px; /* Přidá trochu prostoru kolem textu */
+  }
+
+  .menu .submenu li:last-child {
+    border-bottom: none;
+}
+  
+.menu .submenu li a {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    text-align: center; /* Zarovná text na střed */
+}
+  
+  .menu .submenu li a:hover {
+	background-color: #f0f0f0;
+  }
+  
+  /* Zajištění správného rozložení menu */
+  .menu > li {
+    position: relative;
+    display: inline-block;
+}
+
+.menu > li > a {
+    padding: 10px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+}
+  
+  /* Skrývá submenu při načtení stránky */
+ul.submenu {
+    display: none;
+}
+
+/* Ujistíme se, že dropdown je zobrazený až po kliknutí */
+li.dropdown.active > .submenu {
+    display: block;
+}
+
+.menu .dropdown:hover > .submenu {
+    display: none;
+    animation: none;
+}
+

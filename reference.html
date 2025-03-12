@@ -23,9 +23,19 @@
         <nav>
           <ul class="menu">
             <li><a href="index.html">Catering</a></li>
-            <li><a href="sluzby.html">Služby</a></li>
+            <li class="dropdown">
+              <a href="#">Služby</a> <!-- Odebrán odkaz na sluzby.html -->
+              <ul class="submenu">
+                <li><a href="#">Rauty a Koktejly</a></li>
+                <li><a href="#">Svatební hostiny, Bankety</a></li>
+                <li><a href="#">Svatební agentura</a></li>
+                <li><a href="#">Firemní akce</a></li>
+                <li><a href="#">Veletrhy</a></li>
+                <li><a href="#">Doprovodné programy</a></li>
+              </ul>
+            </li>
             <li><a class="active" href="reference.html">Reference </a></li>
-            <li><a href="fotografie.html">fotografie</a></li>
+            <li><a href="fotografie.html">Fotografie</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             
           </ul>
@@ -63,5 +73,53 @@
   </div>
 </footer>
 <script type="text/javascript">Cufon.now();</script>
+<script>
+
+  $(document).ready(function() {
+    var $dropdown = $("li.dropdown");
+  
+    // Skryje submenu při načtení stránky
+    $(".submenu").hide();
+  
+    // Kliknutí na "Služby" zobrazí submenu
+    $dropdown.children("a").click(function(e) {
+      e.preventDefault(); // Zabrání přechodu na odkaz
+      var $parent = $(this).parent();
+      
+      // Zavře všechna submenu a otevře jen aktuální
+      if (!$parent.hasClass("active")) {
+        $(".dropdown").removeClass("active").find(".submenu").stop(true, true).slideUp(200);
+        $parent.addClass("active").find(".submenu").stop(true, true).slideDown(200);
+      } else {
+        $parent.removeClass("active").find(".submenu").stop(true, true).slideUp(200);
+      }
+    });
+  
+    // Když myš přejede na "Služby", zobrazí submenu
+    $dropdown.mouseenter(function() {
+      $(this).addClass("active").find(".submenu").stop(true, true).slideDown(200);
+    });
+  
+    // Když myš odejde, submenu se skryje
+    $dropdown.mouseleave(function() {
+      if (!$(this).hasClass("clicked")) {
+        $(this).removeClass("active").find(".submenu").stop(true, true).slideUp(200);
+      }
+    });
+  
+    // Kliknutí mimo menu zavře submenu
+    $(document).click(function(e) {
+      if (!$(e.target).closest('.dropdown').length) {
+        $(".dropdown").removeClass("active").find(".submenu").stop(true, true).slideUp(200);
+      }
+    });
+  
+    // Zabrání zavření, když klikneš do submenu
+    $(".submenu").click(function(e) {
+      e.stopPropagation();
+    });
+  });
+  
+  </script>
 </body>
 </html>
