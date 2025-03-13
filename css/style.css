@@ -101,7 +101,11 @@ a:hover {
 
 
 .row-top main {
+<<<<<<< HEAD
 display: flex;
+=======
+	displey: flex;
+>>>>>>> bab9cd0974752e9638821ad46489cbcac6e6d72c
 	margin: 0 auto;
 
   }
@@ -123,7 +127,11 @@ display: flex;
 	text-align: center;
 	padding: 0 20px;
 	justify-content: center;
+<<<<<<< HEAD
 	margin-right: 0 auto;
+=======
+	margin-right: ;
+>>>>>>> bab9cd0974752e9638821ad46489cbcac6e6d72c
 	position: relative;
 	margin-right: 200px;
 	
@@ -741,6 +749,7 @@ h3.handwriting {
 .center {
 	text-align: center;
   }
+<<<<<<< HEAD
   
  /* Skrytí submenu */
  .menu .submenu {
@@ -827,3 +836,6 @@ li.dropdown.active > .submenu {
     animation: none;
 }
 
+=======
+  
+>>>>>>> bab9cd0974752e9638821ad46489cbcac6e6d72c
