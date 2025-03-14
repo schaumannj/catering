@@ -101,12 +101,9 @@ a:hover {
 
 
 .row-top main {
-<<<<<<< HEAD
+
 display: flex;
-=======
-	displey: flex;
->>>>>>> bab9cd0974752e9638821ad46489cbcac6e6d72c
-	margin: 0 auto;
+margin: 0 auto;
 
   }
 
@@ -129,8 +126,6 @@ display: flex;
 	justify-content: center;
 
 	margin-right: 0 auto;
-
-	margin-right: ;
 	position: relative;
 	margin-right: 200px;
 	
