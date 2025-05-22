@@ -1,3 +1,10 @@
+/*
+    KOMPLETNÍ CSS KÓD
+    Vložte tento kód do vašeho souboru css/style.css
+    Před vložením si ZÁLOHUJTE původní soubor.
+    Nezapomeňte smazat VŠECHEN <style> blok z vašeho HTML souboru.
+*/
+
 @font-face {
     font-family: Autography;
     src: url("Autography.otf") format("opentype");
@@ -10,96 +17,96 @@
 
 
 @font-face {
-	font-family: GothamNarrow;
-	src: url("GothamNarrow-Book.otf") format("truetype");
+    font-family: GothamNarrow;
+    src: url("GothamNarrow-Book.otf") format("truetype");
 }
 
 /* Getting the new tags to behave */
 article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {
-	display:block;
+    display:block;
 }
 mark, rp, rt, ruby, summary, time {
-	display:inline;
+    display:inline;
 }
 /* Global properties ======================================================== */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Klíčové pro správné počítání šířky */
+
   }
 html {
-	width:100%;
+    width:100%;
 }
 body {
-	font-family:GothamNarrow;
-	font-size:100%;
-	color:#7f7f7f;
-	min-width:960px;
-	background:#000
+    font-family:GothamNarrow;
+    font-size:100%;
+    color:#7f7f7f;
+    min-width:1200px; /* **Zvýšeno pro zajištění šířky na větších obrazovkách** */
+    background:#000
 }
 .ic {
-	border:0;
-	float:right;
-	background:#fff;
-	color:#f00;
-	width:50%;
-	line-height:10px;
-	font-size:10px;
-	margin:-220% 0 0 0;
-	overflow:hidden;
-	padding:0
+    border:0;
+    float:right;
+    background:#fff;
+    color:#f00;
+    width:50%;
+    line-height:10px;
+    font-size:10px;
+    margin:-220% 0 0 0;
+    overflow:hidden;
+    padding:0
 }
 .bg {
-	width:100%;
-	background:center 0 no-repeat;
+    width:100%;
+    background:center 0 no-repeat;
 }
 .main {
-	width:960px;
-	padding:0;
-	margin:0px auto;
-	font-size:13px;
-	line-height:25px;
+    width: 1200px; /* **KLÍČOVÁ ZMĚNA: Nastavena nová širší pevná šířka pro hlavní obsah** */
+    padding:0;
+    margin:0px auto; /* Centrování hlavního obsahu */
+    font-size:15px;
+    line-height:25px;
 }
 
 
 .main-top{
-	display: flex;
-	margin: 0 auto;
-	justify-content: space-between;
-	position: relative;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    position: relative;
 }
 
 .main img {
-	margin: 10px;
+    margin: 10px;
   }
 
 .container {
-	width:940px;
-	padding:0;
-	margin:0 auto;
+    /* width:940px; */ /* Zvažte, zda tento kontejner potřebujete, pokud používáte .main s novou šířkou. Pokud ne, můžete ho i smazat nebo upravit. */
+    padding:0;
+    margin:0 auto;
 }
 a {
-	color:#7f7f7f;
-	outline:none;
+    color:#7f7f7f;
+    outline:none;
 
 }
 a:hover {
-	text-decoration:none;
+    text-decoration:none;
 }
 .col-1, .col-2, .column-1, .column-2 {
-	float:left;
+    float:left; /* Pro flexbox se floaty ruší, ale ponechávám pro kompatibilitu, pokud je používáte jinde */
 }
 
 .logo {
-	width: 100%;  
-	height: 100px;
-	float: left;  
+    width: 100%;
+    height: 100px;
+    float: left;
   }
 
 .row-top {
-	text-align: left; 
-	
+    text-align: left;
+
   }
 
 
@@ -112,89 +119,89 @@ margin: 0 auto;
   }
 
   .wrapper{
-	width: 100%;    
-	display: flex;  
-	text-align: center;
-	padding: 0 20px;
-	justify-content: center;
-	
-	position: relative;
-	
+    width: 100%; /* Wrapper vyplní celou šířku .main */
+    display: flex;
+    text-align: center; /* Zvažte, zda je text-align: center pro wrapper vhodný, pokud nemáte text uprostřed. Spíše by to mělo být na jednotlivých blocích. */
+    padding: 0 20px; /* Padding na okrajích wrapperu */
+    justify-content: center; /* Centrování obsahu ve wrapperu, pokud to flex-grow nedělá samo */
+
+    position: relative;
+
   }
 
   .img-bottom{
-	   
-	display: flex;  
-	text-align: center;
-	padding: 0 20px;
-	justify-content: center;
 
-	margin-right: 0 auto;
-	position: relative;
-	margin-right: 200px;
-	
+    display: flex;
+    text-align: center;
+    padding: 0 20px;
+    justify-content: center;
+
+    margin-right: 0 auto;
+    position: relative;
+    margin-right: 200px; /* Zvažte, zda je tato mezera stále potřeba */
+
   }
 
 .extra-wrap {
-	overflow: hidden;
+    overflow: hidden;
 }
 .clear {
-	clear: both;
-	display: block;
-	overflow: hidden;
-	visibility: hidden;
-	width: 0;
-	height: 0;
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
 }
 p {
-	margin-bottom:18px;
-	text-align: justify;
+    margin-bottom:18px;
+    text-align: justify;
 }
 .p1 {
-	margin-bottom:8px;
-	text-align: justify;
-	
+    margin-bottom:8px;
+    text-align: justify;
+
 }
 .p2 {
-	margin-bottom:15px;
-	font-size: 20px;
-	text-align: justify;
+    margin-bottom:15px;
+    font-size: 20px;
+    text-align: justify;
 }
 .p3 {
-	margin-bottom:30px;
+    margin-bottom:30px;
 }
 .p4 {
-	margin-bottom:40px;
+    margin-bottom:40px;
 }
 .p5 {
-	margin-bottom:50px;
+    margin-bottom:50px;
 }
 .reg {
-	text-transform:uppercase;
+    text-transform:uppercase;
 }
 .fleft {
-	float:left;
+    float:left;
 }
 .fright {
-	float:right;
+    float:right;
 }
 .alignright {
-	text-align:right;
+    text-align:right;
 }
 .aligncenter {
-	text-align:center;
+    text-align:center;
 }
 .it {
-	font-style:italic;
+    font-style:italic;
 }
 .color-1 {
-	color:#fff;
+    color:#fff;
 }
 .color-2 {
-	color:#c42e02;
+    color:#c42e02;
 }
 .color-3 {
-	color:#769e02 !important;
+    color:#769e02 !important;
 }
 
 
@@ -205,593 +212,590 @@ p {
 
 
 .img-border{
-    width: 250px; 
-    height: 250px; 
-    object-fit: cover; 
-	border-radius: 25px 25px 25px 25px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 25px 25px 25px 25px;
 }
 .indent {
-	padding:20px;
-	
-	
+    padding:20px;
+
+
 }
 .indent-left {
-	
-		padding-left: 20px;  
-	}
+
+        padding-left: 20px;
+    }
 .indent-left h3{
-	text-align: left;
-	
+    text-align: left;
+
 }
-	
+
 
 .indent-right {
-	padding-right:50px;
+    padding-right:50px;
 }
 .indent-bot {
-	margin-bottom:20px;
+    margin-bottom:20px;
 }
 .indent-bot2 {
-	margin-bottom:30px;
+    margin-bottom:30px;
 }
 .indent-bot3 {
-	margin-bottom:45px;
+    margin-bottom:45px;
 }
 .prev-indent-bot {
-	margin-bottom:10px;
+    margin-bottom:10px;
 }
 .img-indent-bot {
-	margin-bottom:25px;
-}
-.margin-bot {
-	margin-bottom:35px;
+    margin-bottom:25px;
 }
 .img-indent {
-	float:left;
-	margin:0 30px 0px 0;
+    float:left;
+    margin:0 30px 0px 0;
 }
 .img-indent2 {
-	float:left;
-	margin:0 13px 0px 0;
+    float:left;
+    margin:0 13px 0px 0;
 }
 .img-indent-r {
-	float:right;
-	margin:0 0px 0px 40px;
+    float:right;
+    margin:0 0px 0px 40px;
 }
 .buttons a:hover {
-	cursor:pointer;
+    cursor:pointer;
 }
 .menu li a, .list-1 li a, .link, .button-1, .button-2, h1 a {
-	text-decoration:none;
-	
+    text-decoration:none;
+
 }
 
 .li{
-	font-size: 15px;
+    font-size: 15px;
 }
 /*********************************header*************************************/
 header {
-	width:100%;
-	background:#f2f2f2;
-	position:relative;
-	z-index:2;
+    width:100%;
+    background:#f2f2f2;
+    position:relative;
+    z-index:2;
 }
 .row-top {
-	width:100%;
-	padding:10px 0;
-	background:#000;
+    width:100%;
+    padding:10px 0;
+    background:#000;
 }
 h1 {
-	padding:0px 0 0 10px;
-	float:left;
+    padding:0px 0 0 10px;
+    float:left;
 }
 h1 a {
-	display:inline-block;
-	font-size:50px;
-	font-weight:normal;
-	line-height:1.4em;
-	color:#fff;
-	letter-spacing:-3px;
-	margin-top:-10px;
+    display:inline-block;
+    font-size:50px;
+    font-weight:normal;
+    line-height:1.4em;
+    color:#fff;
+    letter-spacing:-3px;
+    margin-top:-10px;
 }
 h1 a span {
-	color:#c52e02
+    color:#c52e02
 }
 h2 {
-	font-size:60px;
-	font-weight:normal;
-	line-height:108px;
-	color:#fff;
-	text-align:center;
+    font-size:60px;
+    font-weight:normal;
+    line-height:108px;
+    color:#fff;
+    text-align:center;
 }
 h2 span {
-	color:#000;
+    color:#000;
 }
 #page1 h2 {
-	margin-bottom:9px;
+    margin-bottom:9px;
 }
 /***** menu *****/
 .menu {
-	padding:26px 10px 0 0;
-	float:right;
-	display: flex;
-	margin-top: 20px;
+    padding:26px 10px 0 0;
+    float:right;
+    display: flex;
+    margin-top: 20px;
 }
 .menu li {
-	float:left;
-	padding-left:40px;
-	margin: 0 20px;
-	
+    float:left;
+    padding-left:40px;
+    margin: 0 20px;
+
 }
 .menu li a {
 
-	line-height:18px;
-	padding:0;
-	color:#fff;
-	font-size: 25px;
+    line-height:18px;
+    padding:0;
+    color:#fff;
+    font-size: 25px;
 }
 .menu li a.active, .menu > li > a:hover {
-	color:#c52e02;
+    color:#c52e02;
 }
 .row-bot {
-	width:100%;
-	background:url(../images/row-bot-tail.gif) center top repeat-x;
-	border-color: #6a8125;
+    width:100%;
+    background:url(../images/row-bot-tail.gif) center top repeat-x;
+    border-color: #6a8125;
 }
 .row-bot-bg {
-	width:100%;
-	min-height:122px;
-	background:url(../images/row-bot-bg.jpg) center top no-repeat ;
-	
+    width:100%;
+    min-height:122px;
+    background:url(../images/row-bot-bg.jpg) center top no-repeat ;
+
 
 }
 /***** slider *****/
 .slider-wrapper {
-	width:940px;
-	height:466px;
-	padding:10px;
-	background:white;
-	overflow:hidden;
-	
+    width:940px;
+    height:466px;
+    padding:10px;
+    background:white;
+    overflow:hidden;
+
 }
 .slider {
-	width:940px;
-	height:466px;
+    width:940px;
+    height:466px;
 }
 .items {
-	display:none;
+    display:none;
 }
 .pagination {
-	position:absolute;
-	left:427px;
-	bottom:19px;
-	z-index:99;
+    position:absolute;
+    left:427px;
+    bottom:19px;
+    z-index:99;
 }
 .pagination li {
-	float:left;
-	padding-right:4px;
+    float:left;
+    padding-right:4px;
 }
 .pagination a {
-	display:block;
-	width:26px;
-	height:26px;
-	background:url(../images/slider-pagination.png) right top no-repeat;
-	cursor:pointer;
+    display:block;
+    width:26px;
+    height:26px;
+    background:url(../images/slider-pagination.png) right top no-repeat;
+    cursor:pointer;
 }
 .pagination li.current a {
-	cursor:default;
+    cursor:default;
 }
 .pagination li.current a,  .pagination a:hover {
-	background-position:left top;
+    background-position:left top;
 }
 /*********************************content*************************************/
 #content {
-	width:100%;
-	padding:15px 0 50px;
-	background:#f2f2f2;
-	position:relative;
-	z-index:1;
+    width:100%;
+    padding:15px 0 50px;
+    background:#f2f2f2;
+    position:relative;
+    z-index:1;
 }
 .spacer-1 {
-	width:100%;
-	background: 217px 0 repeat-y;
+    width:100%;
+    background: 217px 0 repeat-y;
 }
 h3 {
-	font-size:24px;
-	line-height:2em;
-	color:#404040;
-	font-weight:normal;
-	letter-spacing:-1px;
-	margin-bottom:5px;
-	
+    font-size:24px;
+    line-height:2em;
+    color:#404040;
+    font-weight:normal;
+    letter-spacing:-1px;
+    margin-bottom:5px;
+
 }
 
 
 h5 {
-	margin-bottom:2px;
+    margin-bottom:2px;
 }
 h6 {
-	color:#000000;
-	
-	
+    color:#000000;
+
+
 }
 .border-bot {
-	width:100%;
-	padding-bottom:20px;
-	background: 0 bottom repeat-x;
+    width:100%;
+    padding-bottom:20px;
+    background: 0 bottom repeat-x;
 }
 .box {
-	width:100%;
-	background:0 0 repeat-x;
+    width:100%;
+    background:0 0 repeat-x;
 }
 .button-1 {
-	display:inline-block;
-	padding:12px 19px;
-	font-size:13px;
-	line-height:1.23em;
-	color:#fff;
-	background:url(../images/button1-tail.gif) 0 0 repeat-x #c42e02;
-	cursor:pointer;
+    display:inline-block;
+    padding:12px 19px;
+    font-size:13px;
+    line-height:1.23em;
+    color:#fff;
+    background:url(../images/button1-tail.gif) 0 0 repeat-x #c42e02;
+    cursor:pointer;
 }
 .button-1:hover {
-	background:#c42e02;
+    background:#c42e02;
 }
 .button-2 {
-	display:inline-block;
-	padding:12px 19px;
-	font-size:13px;
-	line-height:1.23em;
-	color:#fff;
-	background:url(../images/button2-tail.gif) 0 0 repeat-x #779f02;
-	cursor:pointer;
+    display:inline-block;
+    padding:12px 19px;
+    font-size:13px;
+    line-height:1.23em;
+    color:#fff;
+    background:url(../images/button2-tail.gif) 0 0 repeat-x #779f02;
+    cursor:pointer;
 }
 .button-2:hover {
-	background:#779f02;
-	
+    background:#779f02;
+
 }
 
 
 
 .list-1 li {
-	line-height:18px;
-	padding:6px 0 6px 20px;
-	background:url(../images/marker-1.png) 0 12px no-repeat;
-	font-size: 20px;
-	text-align: justify;
-	list-style: none;  /* Odstraní bullet points */
-  
-	
+    line-height:18px;
+    padding:6px 0 6px 20px;
+    background:url(../images/marker-1.png) 0 12px no-repeat;
+    font-size: 20px;
+    text-align: justify;
+    list-style: none;  /* Odstraní bullet points */
+
+
 }
 .list-1 a {
-	display:inline-block;
-	color:#7f7f7f;
+    display:inline-block;
+    color:#7f7f7f;
 }
 .list-1 a:hover {
-	color:#d53a03;
-	text-decoration:underline;
+    color:#d53a03;
+    text-decoration:underline;
 }
 .list-1 span {
-	display:block;
-	line-height:25px;
-	padding:8px 0 17px;
+    display:block;
+    line-height:25px;
+    padding:8px 0 17px;
 }
 .list-1 strong {
-	display:block;
+    display:block;
 }
 .list-2 {
-	width:270px;
+    width:270px;
 }
 .list-2 li label {
-	font-weight: bold;
+    font-weight: bold;
 }
 .list-2 dt {
-	font-weight:bold;
-	margin-bottom:5px;
+    font-weight:bold;
+    margin-bottom:5px;
 }
 .list-2 dt, .list-2 dd {
-	width:100%;
-	overflow:hidden;
+    width:100%;
+    overflow:hidden;
 }
 .list-2 em {
-	font-style:normal;
-	float:left;
+    font-style:normal;
+    float:left;
 }
 .list-2 span {
-	float:right;
-	text-align:right;
-	width:auto;
-	font-weight:normal;
+    float:right;
+    text-align:right;
+    width:auto;
+    font-weight:normal;
 }
 .list-2 dt span {
-	font-weight:bold;
+    font-weight:bold;
 }
 .price-list li {
-	overflow: hidden;
-	vertical-align: top;
-	line-height: 18px;
-	padding:6px 0 6px 20px;
-	background:url(../images/marker-2.png) 0 12px no-repeat;
+    overflow: hidden;
+    vertical-align: top;
+    line-height: 18px;
+    padding:6px 0 6px 20px;
+    background:url(../images/marker-2.png) 0 12px no-repeat;
 }
 .price-list strong {
-	display: block;
-	overflow: hidden;
+    display: block;
+    overflow: hidden;
 }
 .price-list span {
-	float: right;
-	color: #7f7f7f;
+    float: right;
+    color: #7f7f7f;
 }
 .price-list a {
-	float: left;
-	text-decoration: none;
-	color: #7f7f7f;
+    float: left;
+    text-decoration: none;
+    color: #7f7f7f;
 }
 .price-list a:hover {
-	color:#81a60b;
-	text-decoration:underline;
+    color:#81a60b;
+    text-decoration:underline;
 }
 .link:hover {
-	text-decoration:underline;
+    text-decoration:underline;
 }
 .link-1 {
-	display:inline-block;
-	font-size:14px;
-	padding-right:8px;
-	background:right 8px no-repeat;
+    display:inline-block;
+    font-size:14px;
+    padding-right:8px;
+    background:right 8px no-repeat;
 }
 .link-1:hover {
-	color:#fff;
+    color:#fff;
 }
 .text-1 {
-	font-size:14px;
+    font-size:14px;
 }
 
 dl span {
-	float:left;
-	width:96px;
-	font-weight:bold;
+    float:left;
+    width:96px;
+    font-weight:bold;
 }
 /***** bx-slider *****/
 .bx-wrapper {
-	overflow:hidden;
-	position:relative;
+    overflow:hidden;
+    position:relative;
 }
 #page2 .bx-wrapper {
-	width:450px !important;
-	height:545px;
+    width:450px !important;
+    height:545px;
 }
 #page3 .bx-wrapper {
-	width:940px !important;
-	height:752px;
+    width:940px !important;
+    height:752px;
 }
 .bx-window {
-	height:510px;
-	overflow:hidden;
-	width:100%;
-	position:relative;
+    height:510px;
+    overflow:hidden;
+    width:100%;
+    position:relative;
 }
 #page3 .bx-window {
-	height:710px;
+    height:710px;
 }
 #slider {
-	width:100%;
-	height:510px;
-	overflow:hidden;
+    width:100%;
+    height:510px;
+    overflow:hidden;
 }
 #slider > div {
-	overflow:hidden;
-	width:160px;
-	height:510px;
+    overflow:hidden;
+    width:160px;
+    height:510px;
 }
 #slider-2 > div {
-	overflow:hidden;
-	width:240px;
-	height:710px;
+    overflow:hidden;
+    width:240px;
+    height:710px;
 }
 #slider figure {
-	margin-bottom:8px;
+    margin-bottom:8px;
 }
 #slider-2 figure {
-	margin-bottom:17px;
+    margin-bottom:17px;
 }
 #slider-2 h5 {
-	margin-bottom:5px
+    margin-bottom:5px
 }
 .bx-next {
-	display:inline-block;
-	font-size:19px;
-	line-height:1.2em;
-	color:#72ad1a;
-	text-transform:capitalize;
-	text-decoration:none;
-	position:absolute;
-	z-index:99;
-	left:63px;
-	bottom:4px;
+    display:inline-block;
+    font-size:19px;
+    line-height:1.2em;
+    color:#72ad1a;
+    text-transform:capitalize;
+    text-decoration:none;
+    position:absolute;
+    z-index:99;
+    left:63px;
+    bottom:4px;
 }
 .bx-prev {
-	display:none !important;
+    display:none !important;
 }
 .bx-pager {
-	padding:16px 0 0 0;
-	text-align:center;
+    padding:16px 0 0 0;
+    text-align:center;
 }
 #page3 .bx-pager {
-	text-align:right;
-	padding:23px 20px 0 0;
+    text-align:right;
+    padding:23px 20px 0 0;
 }
 .pager-link {
-	display:inline-block;
-	color:#c42e02;
-	margin-right:12px;
-	cursor:pointer;
-	text-decoration:none;
+    display:inline-block;
+    color:#c42e02;
+    margin-right:12px;
+    cursor:pointer;
+    text-decoration:none;
 }
 .pager-link:hover, .pager-active {
-	color:#7f7f7f;
+    color:#7f7f7f;
 }
 .pager-active {
-	cursor:default;
+    cursor:default;
 }
 /***** Lightbox image *****/
 .lightbox-image {
-	position:relative;
-	z-index:1;
-	overflow:hidden;
-	display:inline-block;
-	cursor:pointer;
+    position:relative;
+    z-index:1;
+    overflow:hidden;
+    display:inline-block;
+    cursor:pointer;
 }
 .lightbox-image img {
-	position:relative;
-	z-index:1;
+    position:relative;
+    z-index:1;
 }
 .lightbox-image span {
-	display:inline-block;
-	position:absolute;
-	left:0px;
-	top:-100%;
-	width:100%;
-	height:100%;
-	background:url(../images/magnify.png) no-repeat 50% 50%;
-	z-index:2;
-	padding:0;
+    display:inline-block;
+    position:absolute;
+    left:0px;
+    top:-100%;
+    width:100%;
+    height:100%;
+    background:url(../images/magnify.png) no-repeat 50% 50%;
+    z-index:2;
+    padding:0;
 }
 /***** contact form *****/
 #contact-form {
-	display:block;
-	width:100%;
+    display:block;
+    width:100%;
 }
 #contact-form label {
-	display:block;
-	height:30px;
-	overflow:hidden;
+    display:block;
+    height:30px;
+    overflow:hidden;
 }
 #contact-form input {
-	float:left;
-	width:232px;
-	font-size:12px;
-	line-height:1.25em;
-	color:#808080;
-	padding:2px 10px;
-	margin:0;
-	font-family:Arial, Helvetica, sans-serif;
-	border:1px solid #ededed;
-	background:#fff;
-	outline:none;
+    float:left;
+    width:232px;
+    font-size:12px;
+    line-height:1.25em;
+    color:#808080;
+    padding:2px 10px;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    border:1px solid #ededed;
+    background:#fff;
+    outline:none;
 }
 #contact-form textarea {
-	float:left;
-	height:204px;
-	width:474px;
-	max-height:204px;
-	max-width:474px;
-	font-size:12px;
-	line-height:1.25em;
-	color:#808080;
-	padding:5px 10px;
-	margin:0;
-	font-family:Arial, Helvetica, sans-serif;
-	border:1px solid #ededed;
-	background:#fff;
-	overflow:auto;
-	outline:none;
+    float:left;
+    height:204px;
+    width:474px;
+    max-height:204px;
+    max-width:474px;
+    font-size:12px;
+    line-height:1.25em;
+    color:#808080;
+    padding:5px 10px;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    border:1px solid #ededed;
+    background:#fff;
+    overflow:auto;
+    outline:none;
 }
 .text-form {
-	float:left;
-	display:block;
-	line-height:24px;
-	width:115px;
+    float:left;
+    display:block;
+    line-height:24px;
+    width:115px;
 }
 .buttons {
-	padding:10px 0 0 0;
-	text-align:right;
+    padding:10px 0 0 0;
+    text-align:right;
 }
 .buttons a {
-	margin-left:6px;
-	padding:12px 35px;
+    margin-left:6px;
+    padding:12px 35px;
 }
 /****************************footer************************/
 footer {
-	width:100%;
-	padding:23px 0 30px;
-	color:#fff;
+    width:100%;
+    padding:23px 0 30px;
+    color:#fff;
 }
 footer a {
-	color:#c42e02;
+    color:#c42e02;
 }
 footer span {
-	display:block;
+    display:block;
 }
 footer .main {
-	font-size:14px;
-	line-height:25px;
+    font-size:14px;
+    line-height:25px;
 }
 .list-services {
-	padding:0;
+    padding:0;
 }
 .list-services li {
-	float:left;
-	padding:0 0 0 10px;
+    float:left;
+    padding:0 0 0 10px;
 }
 .handwriting {
-	font-family: scrgunny;
+    font-family: scrgunny;
 }
 h3.handwriting {
-	font-size: 36px;
+    font-size: 36px;
 }
 .header2 {
-	font-size: 80px;
-	color: #ededed;
-	padding: 30px;
-	margin: 10px;
+    font-size: 80px;
+    color: #ededed;
+    padding: 30px;
+    margin: 10px;
 }
 .center {
-	text-align: center;
+    text-align: center;
   }
 
-  
+
  /* Skrytí submenu */
  .menu .submenu {
-    display: flex;  /* Skryje submenu po načtení */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Zarovná texty vertikálně */
+    justify-content: center;
     position: absolute;
     background-color: #fff;
     border: 1px solid #b78a8a;
     top: 100%;
-	left: 70%;
-    transform: translateX(-50%); /* Zarovná submenu na střed pod hlavní položkou */
+    left: 70%;
+    transform: translateX(-50%);
     width: 200px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     text-align: center;
 }
 
-  
+
   /* Zarovnání submenu a animace */
   .menu .dropdown:hover > .submenu {
-	display: block;
-	animation: slideDown 0.3s ease-out;
+    display: block;
+    animation: slideDown 0.3s ease-out;
   }
-  
+
   /* Animace pro vyjetí submenu */
   @keyframes slideDown {
-	0% { transform: translateY(-10px); opacity: 0; }
-	100% { transform: translateY(0); opacity: 1; }
+    0% { transform: translateY(-10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
   }
-  
+
   /* Styl pro odkazy v submenu */
   .menu .submenu li {
-	list-style: none;
-	padding: 10px;
-	border-bottom: 1px solid #030801; /* Tenká šedá čára mezi položkami */
-    padding: 10px; /* Přidá trochu prostoru kolem textu */
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #030801;
+    padding: 10px;
   }
 
   .menu .submenu li:last-child {
     border-bottom: none;
 }
-  
+
 .menu .submenu li a {
     display: block;
     width: 100%;
@@ -799,13 +803,13 @@ h3.handwriting {
     text-decoration: none;
     color: #333;
     font-size: 16px;
-    text-align: center; /* Zarovná text na střed */
+    text-align: center;
 }
-  
+
   .menu .submenu li a:hover {
-	background-color: #f0f0f0;
+    background-color: #f0f0f0;
   }
-  
+
   /* Zajištění správného rozložení menu */
   .menu > li {
     position: relative;
@@ -818,7 +822,7 @@ h3.handwriting {
     text-decoration: none;
     font-size: 25px;
 }
-  
+
   /* Skrývá submenu při načtení stránky */
 ul.submenu {
     display: none;
@@ -834,4 +838,302 @@ li.dropdown.active > .submenu {
     animation: none;
 }
 
+.subsection-text {
+  text-align: left;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+  color: #666;
+  font-size: 20px;
+}
 
+.subsection-heading{
+  text-align: left;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+  color: #666;
+  font-size: 30px;
+}
+
+/* Styly pro textové bloky (v hlavním obsahu) - přesunuto sem, pokud je to obecné */
+.text-block {
+    margin-bottom: 25px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.text-block h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.text-block p {
+    font-size: 1.15em;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.center-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Specifické styly pro svatební hostiny stránku (nebo jinou, kde chcete širší obsah a flexbox) */
+/* Toto je duplikace z vašeho <style> bloku z HTML, která BY MĚLA BÝT přesunuta sem */
+
+body#page5 {
+    background-color: #f2f2f2;
+}
+
+.main .wrapper {
+    background-color: #f2f2f2;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    width: 100%; /* Zajistí, že wrapper vyplní celou šířku .main */
+}
+
+.column-1 {
+    width: 300px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.column-1 .indent-left {
+    padding-left: 0;
+}
+
+.column-1 .maxheight.indent-bot {
+    background-color: transparent; 
+    padding: 0; 
+    margin-right: 30px; 
+    box-sizing: border-box;
+    border-radius: 0; 
+    border: none; 
+    box-shadow: none; 
+}
+
+.sidebar-list-container {
+    background-color: #f8f8f8; /* **POZADÍ SIDEBARU: SVĚTLE ŠEDÉ** */
+    padding: 20px; /* Vnitřní odsazení obsahu uvnitř sidebaru */
+    border-radius: 5px; /* Zaoblené rohy boxu sidebaru */
+    border: 1px solid #eee; /* Rámeček sidebaru */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* **JEMNÝ STÍN SIDEBARU** */
+    margin-top: 0;
+    height: auto; /* **Výška se přizpůsobí obsahu, neroztahuje se dolů** */
+    display: flex; /* Pro flexbox nadpisu a seznamu uvnitř */
+    flex-direction: column;
+    /* Ujistěte se, že zde NENÍ 'flex-grow: 1;' */
+}
+
+.sidebar-list-title {
+    font-size: 1.3em;
+   
+    color: #555;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar-list {
+    list-style: disc;
+    padding: 0;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.sidebar-list li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #ccc;
+    transition: background-color 0.2s ease;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.sidebar-list li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.sidebar-list li:last-child {
+    border-bottom: 0;
+}
+
+.column-2 {
+    width: calc(100% - 300px - 30px);
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.content-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Klíčové pro rozložení vedle sebe */
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.content-images img {
+    width: calc(30% - 10px); /* Dva obrázky na řádek s mezerou 20px */
+    max-width: 30%; /* Zajistí, že se obrázek nepřetáhne přes svou 50% šířku */
+    height: 250px;
+    width: 250px;
+    
+    border-radius: 25px;
+}
+
+/* Media queries pro responsivitu - aktualizováno */
+@media (max-width: 1250px) { /* Pro menší monitory než 1200px */
+    .main {
+        width: 100%; /* Stránka se zúží na 95% šířky okna */
+    }
+}
+@media (max-width: 992px) { /* Střední obrazovky (tablety) */
+    .main {
+        width: 95%;
+    }
+    .content-images img {
+        width: calc(50% - 10px);
+        height: 280px;
+    }
+}
+@media (max-width: 768px) { /* Malé obrazovky (mobily) */
+    body {
+        min-width: unset; /* Zruší pevnou min-width pro mobily */
+    }
+    .main {
+        width: 100%;
+        padding: 0 10px; /* Menší padding na okrajích */
+    }
+    .main .wrapper {
+    background-color: rgb(239, 216, 216); /* Hlavní obsahová oblast bude bílá */
+    padding: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start; /* **DŮLEŽITÉ: Zabránění roztahování sloupců** */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+    .column-1, .column-2 {
+        width: 100%; /* Oba sloupce na plnou šířku */
+        margin-right: 0;
+    }
+    .column-1 .maxheight.indent-bot {
+        margin-right: 0;
+    }
+    .sidebar-list-container {
+        margin-bottom: 15px; /* Menší mezera pod sidebarem na mobilu */
+    }
+   
+    
+}
+
+/* Skrytí slideru na této stránce */
+.slider-wrapper, .slider {
+    display: none !important;
+}
+
+/* Styly pro odkazy v textu */
+.text-block a {
+    color: #c42e02;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+ /* Styly pro formulář a textové bloky - ponechány beze změny (mimo pořadí) */
+    .contact-form-container {
+      padding: 20px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      margin-top: 30px; /* Mezera nad formulářem */
+      border-radius: 5px;
+    }
+
+    .contact-form-container h4 {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .contact-form-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .contact-form-container input[type="text"],
+    .contact-form-container input[type="email"],
+    .contact-form-container textarea {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1.3em;
+    }
+
+    .contact-form-container textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .contact-form-container button {
+      background-color: #f78d3a;
+      color: #f2f2f2;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1.5em;
+      display: block;
+      margin: 0 auto;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form-container button:hover {
+      background-color: #e07b2f;
+    }
+
+    .text-block {
+      margin-bottom: 25px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .text-block h3 {
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .text-block ul { /* Toto je pro UL v .text-block, ne pro sidebar */
+      list-style: disc inside;
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .text-block ul li {
+      margin-bottom: 8px;
+    }
+
+    .center-text {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* --- KLÍČOVÉ CSS ZMĚNY A DOPLNĚNÍ PRO REFERENCE STRÁNKU --- */
+
+   
+    
+
+    
+
+    
