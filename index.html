@@ -17,6 +17,268 @@
   <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
   <script src="js/jquery.equalheights.js" type="text/javascript"></script>
   <!--[if lt IE 9]><script type="text/javascript" src="js/html5.js"></script><![endif]-->
+  <style>
+    header, .row-top, .main-top, .wrapper, nav, .menu, .menu li a {
+      background: #ededed !important;
+      color: #111 !important;
+    }
+    .menu li a, .menu li a.active {
+      color: #111 !important;
+    }
+    .menu li a:hover {
+      color: #bfa046 !important;
+    }
+    .pdf-section {
+      background: #ededed;
+      padding: 60px 0 40px 0;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pdf-section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 32px;
+      padding-right: 32px;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      display: block;
+      font-size: 1.3em;
+    }
+    .pdf-section-inner h2, .pdf-section-inner h3 {
+      text-align: center;
+    }
+    .pdf-circles {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .pdf-circle-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      background: #fff;
+    }
+    .pdf-contact-box {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 24px 32px;
+      margin: 0 auto 40px auto;
+      max-width: 420px;
+      text-align: center;
+      font-size: 1.1em;
+    }
+    .pdf-section h2 {
+      font-family: 'Dynalight', 'Pacifico', cursive, sans-serif;
+      font-size: 2.2rem;
+      color: #bfa046;
+      margin: 32px 0 12px 0;
+      text-align: center;
+      font-weight: 400;
+    }
+    .pdf-section h3 {
+      font-family: 'Dynalight', 'Pacifico', cursive, sans-serif;
+      font-size: 1.5rem;
+      color: #bfa046;
+      margin: 24px 0 8px 0;
+      text-align: center;
+      font-weight: 400;
+    }
+    .pdf-section p {
+      text-align: center;
+      margin-bottom: 18px;
+      color: #444;
+      font-size: 1.1em;
+      line-height: 1.7;
+    }
+    .pdf-intro-section {
+      background: #fff !important;
+      padding: 60px 0 40px 0;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      border: none;
+      box-shadow: none;
+    }
+    .pdf-intro-title {
+      font-family: 'Dynalight', 'Pacifico', cursive, sans-serif;
+      color: #bfa046;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 18px;
+      margin-top: 0;
+      font-weight: 400;
+    }
+    .pdf-intro-maintext {
+      text-align: center;
+      color: #222;
+      font-size: 1.25rem;
+      margin-bottom: 18px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .pdf-intro-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 48px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+      width: 100vw;
+      max-width: 1200px;
+    }
+    .pdf-intro-contact {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 24px 32px;
+      min-width: 320px;
+      max-width: 380px;
+      text-align: left;
+      font-size: 1.1em;
+      margin-bottom: 24px;
+      margin-left: 0;
+    }
+    .pdf-intro-contact b {
+      font-size: 1.1em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .pdf-intro-circles {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    .pdf-intro-circle-img {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      background: #fff;
+    }
+    @media (max-width: 900px) {
+      .pdf-intro-row { flex-direction: column; align-items: center; gap: 24px; }
+      .pdf-intro-circles { justify-content: center; }
+      .pdf-intro-contact { margin: 20px auto 24px auto; }
+    }
+    .pdf-circles-bottom {
+      background: #ededed;
+      padding: 40px 0 40px 0;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .pdf-circle-img-bottom {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      background: #ededed;
+    }
+    .hero-section {
+      width: 100vw;
+      min-width: 100vw;
+      max-width: 100vw;
+      margin: 0;
+      padding: 100px 0 100px 0;
+      background: #ededed !important;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      overflow: visible;
+      margin-bottom: -220px;
+    }
+    .hero-flower {
+      height: 700px;
+      width: auto;
+      position: absolute;
+      right: 0;
+      bottom: -180px;
+      z-index: 10;
+      max-width: 900px;
+      object-fit: contain;
+      background: none;
+      box-shadow: none;
+      pointer-events: none;
+    }
+    .hero-title, .hero-headline {
+      background: #ededed !important;
+    }
+    .hero-headline {
+      font-family: 'scrgunny', 'Dynalight', 'Pacifico', cursive, sans-serif;
+      font-size: 11rem;
+      color: #444;
+      font-weight: 400;
+      line-height: 1.1;
+      text-align: left;
+      margin: 0 0 0 20vw;
+      white-space: pre-line;
+      background: none;
+      z-index: 2;
+      flex: 1 1 60%;
+      letter-spacing: 1px;
+    }
+    .hero-headline .infinito {
+      display: block;
+      margin-left: 200px;
+      margin-top: -60px;
+    }
+    /* Úplně odstraním pseudo-elementy, aby se žádné pruhy nevykreslovaly */
+    .hero-section::before,
+    .hero-section::after,
+    .hero-headline::before,
+    .hero-headline::after {
+      display: none !important;
+      background: none !important;
+      content: none !important;
+    }
+    #content, #content .main {
+      background: #ededed !important;
+    }
+    
+    .menu .submenu {
+      /* position: absolute !important; */
+      /* top: 100% !important; */
+      /* left: 0 !important; */
+      /* width: max-content !important; */
+      /* min-width: 220px !important; */
+      background: #fff !important;
+      border-radius: 8px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      z-index: 2000 !important;
+    }
+    .menu .submenu li a {
+      background: transparent !important;
+      font-size: 14px;
+    }
+    .menu > li > a {
+      font-size: 18px;
+    }
+  </style>
 </head>
 
 <body id="page1">
@@ -30,8 +292,9 @@
             <ul class="menu">
               <li><a class="active" href="index.html">Catering</a></li>
 
+              <li><a href="reference.html">Reference</a></li>
               <li class="dropdown">
-                <a href="#">Služby</a> <!-- Odebrán odkaz na sluzby.html -->
+                <a href="#">Služby</a> 
                 <ul class="submenu">
                   <li><a href="rauty_a_koktejly.html">Rauty a Koktejly</a></li>
                   <li><a href="svatebni_hostiny_a_bankety.html">Svatební hostiny, Bankety</a></li>
@@ -41,95 +304,71 @@
                   <li><a href="doprovodne_programy.html">Doprovodné programy</a></li>
                 </ul>
               </li>
-              <li><a href="reference.html">Reference</a></li>
 
               <li><a href="kontakt.html">Kontakt</a></li>
-
-
-
+              <li><a href="#">Formulář</a></li>
+              <li><a href="#">Facebook</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </div>
-    <div class="row-bot">
-      <div class="row-bot-bg">
-        <div class="main handwriting">
-          <div class="header2 center">Catering Infinito </div>
-          <div class="slider-wrapper">
-            <div class="slider">
-              <ul class="items">
-                <li> <img src="./foto/catering/catering_foto_3.jpg" alt="" /> </li>
-                <li> <img src="./foto/catering/catering_foto_1.jpg" alt="" /> </li>
-                <li> <img src="./foto/catering/catering_foto_4.jpg" alt="" /> </li>
-                <!-- <li> <img src="./foto/catering/catering_foto_5.jpg" alt="" /> </li> -->
-                <!-- <li> <img src="./foto/catering/catering_uvodni_1.jpg" alt="" /> </li> -->
-                <!-- <li> <img src="./foto/catering/catering_uvodni_2.jpg" alt="" /> </li> -->
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </header>
+  <div class="hero-section">
+    <div class="hero-title">VÍTEJTE NA STRÁNKÁCH</div>
+    <div class="hero-content">
+      <div class="hero-headline">Catering<br><span class="infinito">Infinito</span></div>
+      <img class="hero-flower" src="images/flower.png" alt="flower">
+    </div>
+  </div>
   <!--==============================content================================-->
   <section id="content">
     <div class="main">
-
-      <div class="wrapper">
-        <div class="column-1">
-          <div class="maxheight indent-bot">
-            <div class="sidebar-list-container">
-              <h3 class="sidebar-list-title">Zajišťujeme:</h3>
-              <ul class="sidebar-list">
-                <li>Rauty a Koktejly</li>
-                <li>Svatební hostiny, Bankety</li>
-                <li>Svatební agentura</a></li>
-                <li>Firemní akce</li>
-                <li>Veletrhy</li>
-                <li>Doprovodné programy</li>
-              </ul>
-              </div>
-              </div>
-              </div>
-
-        </article>
-        <article class="column-2">
-          <div class="maxheight indent-bot">
-            <h3 class="p1">O nás</h3>
-            <h6 class="p2">Každá akce je pro nás výzvou. Tvoříme jedinečné gastronomické zážitky na míru.
-              Spolupracujeme s předními společnostmi jako ING a OVB ale zároveň nabízíme catering pro svatby,
-              soukromé či firemní večírky, konference, rauty a mnoho dalších příležitostí.</h6>
-            <p class="p2">Ať už plánujete svatební hostinu, firemní akci nebo soukromou oslavu, zajistíme vám
-              nezapomenutel-
-              ný gastronomický zážitek kdekoliv v Evropě. Od vytvoření individuálního menu až po kompletní orga-
-              nizaci prostoru – vše přizpůsobíme vašim přáním. Naše zkušený tým se postará o každý detail.
-              Ať už plánujete velkolepou svatbu s tradičními českými pokrmy nebo neformální koktejl party, naše
-              cateringová služba vám připraví menu přesně podle vašich představ. Od bohatých svatebních hostin
-              až po jednoduché občerstvení na sportovní akci, vždy dbáme na nejvyšší kvalitu surovin a precizní
-              zpracování. Naše zkušený tým vám zajistí bezstarostný průběh celé akce.
-              Komplexní služby pro vaši událost. Kromě vytvoření nezapomenutelného gastronomického zážitku,
-              zajišťujeme také bohatý doprovodný program. Spolupracujeme s profesionálními konferenciéry, mo-
-              derátory, hudebníky a dalšími umělci, kteří dokáží vytvořit jedinečnou atmosféru pro jakoukoli příleži-
-              tost. Ať už hledáte zábavu, nebo preferujete diskrétní a stylovou atmosféru, rádi se přizpůsobíme
-              vašim představám.</p>
-          </div>
-          <div class="img-bottom">
-            <article class="col-1">
-              <img class="img-border" src="./foto/catering/catering_uvodni_1.jpg" alt="">
-            </article>
-            <article class="col-1">
-              <img class="img-border" src="./foto/catering/catering_uvodni_2.jpg" alt="">
-            </article>
-            <article class="col-2">
-              <img class="img-border" src="./foto/catering/catering_foto_1.jpg" alt="">
-            </article>
-          </div>
-
-        </article>
-      </div>
+      <!-- Původní sekce O nás byla odstraněna -->
     </div>
   </section>
+  <div class="pdf-intro-section">
+    <div class="pdf-intro-title">Catering Infinito</div>
+    <div class="pdf-intro-maintext">
+      Hledáte spolehlivého partnera pro organizaci vaší akce?<br>
+      Ať už plánujete firemní večírek, svatbu nebo rodinnou oslavu, rádi vám pomůžeme.<br>
+      Máme dlouholeté zkušenosti s organizací akcí a cateringových služeb na té nejvyšší úrovni.<br><br>
+      Nabízíme komplexní služby včetně gastronomie, technického zajištění i doprovodného programu.<br>
+      Hledáte catering, který překvapí? Kontaktujte nás a společně vytvoříme akci, na kterou vaše hosté nezapomenou.
+    </div>
+    <div class="pdf-intro-row">
+      <div class="pdf-intro-contact">
+        <b>CATERING INFINITO, s.r.o.</b>
+        Obřanská 129, 614 00 Brno<br>
+        Tel.: +420 608 888 001<br>
+        catering@cateringinfinito.cz
+      </div>
+      <div class="pdf-intro-circles">
+        <img class="pdf-intro-circle-img" src="FOTO/Catering/catering_foto_1.jpg" alt="Dezert">
+        <img class="pdf-intro-circle-img" src="FOTO/Catering/catering_foto_3.jpg" alt="Hlavní chod">
+        <img class="pdf-intro-circle-img" src="FOTO/Catering/catering_foto_4.jpg" alt="Předkrm">
+      </div>
+    </div>
+  </div>
+  <div class="pdf-section">
+    <div class="pdf-section-inner">
+      <h2>Catering Brno</h2>
+      <p>Chcete, aby si vaši hosté odnesli nezapomenutelný zážitek? Spojením vašich představ a našich dlouholetých zkušeností vznikají služby i zážitky na každý okamžik.<br>Naše cateringové služby jsou k dispozici kdekoliv v rámci EU. Zajistíme přípravu interiérů i exteriérů.</p>
+      <h3>Catering na gastronomické úrovni</h3>
+      <p>Každá akce je pro nás výzvou. Tvoříme jedinečné gastronomické zážitky na míru. Spolupracujeme s předními společnostmi jako ING a OVB ale zároveň nabízíme catering pro svatby, soukromé či firemní večírky, konference, rauty a mnoho dalších příležitostí.</p>
+      <h3>Cateringové služby</h3>
+      <p>Ať už plánujete svatební hostinu, firemní akci nebo soukromou oslavu, zajistíme vám nezapomenutelný gastronomický zážitek kdekoliv v Evropě. Od vytvoření individuálního menu až po kompletní organizaci prostoru – vše přizpůsobíme vašim přáním. Náš zkušený tým se postará o každý detail.<br><br>
+      Ať už plánujete velkolepou svatbu s tradičními českými pokrmy nebo neformální koktejl party, naše cateringová služba vám připraví menu přesně podle vašich představ. Od bohatých svatebních hostin až po jednoduché občerstvení na sportovní akci, vždy dbáme na nejvyšší kvalitu surovin a precizní zpracování. Náš zkušený tým vám zajistí bezstarostný průběh celé akce.<br><br>
+      Komplexní služby pro vaši událost. Kromě vytvoření nezapomenutelného gastronomického zážitku, zajišťujeme také bohatý doprovodný program. Spolupracujeme s profesionálními konferenciéry, moderátory, hudebníky a dalšími umělci, kteří dokáží vytvořit jedinečnou atmosféru pro jakoukoli příležitost. Ať už hledáte zábavu, nebo preferujete diskrétní a stylovou atmosféru, rádi se přizpůsobíme vašim představám.</p>
+    </div>
+  </div>
+  <div class="pdf-circles-bottom">
+    <img class="pdf-circle-img-bottom" src="FOTO/Catering/catering_uvodni_1.jpg" alt="Raut">
+    <img class="pdf-circle-img-bottom" src="FOTO/Catering/catering_uvodni_2.jpg" alt="Dezert">
+    <img class="pdf-circle-img-bottom" src="FOTO/Catering/catering_foto_5.jpg" alt="Catering">
+    <img class="pdf-circle-img-bottom" src="FOTO/Catering/catering_foto_4.jpg" alt="Catering">
+    <img class="pdf-circle-img-bottom" src="FOTO/Catering/catering_foto_3.jpg" alt="Catering">
+  </div>
   <!--==============================footer=================================-->
   <footer>
     <div class="main">

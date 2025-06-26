@@ -43,7 +43,7 @@ body {
     font-size:100%;
     color:#7f7f7f;
     min-width:1200px; /* **Zvýšeno pro zajištění šířky na větších obrazovkách** */
-    background:#000
+    
 }
 .ic {
     border:0;
@@ -100,13 +100,13 @@ a:hover {
 
 .logo {
     width: 100%;
-    height: 100px;
+    height: 250px;
     float: left;
-  }
+}
 
 .row-top {
     text-align: left;
-
+    padding: 20px 0;
   }
 
 
@@ -119,14 +119,12 @@ margin: 0 auto;
   }
 
   .wrapper{
-    width: 100%; /* Wrapper vyplní celou šířku .main */
+    width: 100%;
     display: flex;
-    text-align: center; /* Zvažte, zda je text-align: center pro wrapper vhodný, pokud nemáte text uprostřed. Spíše by to mělo být na jednotlivých blocích. */
-    padding: 0 20px; /* Padding na okrajích wrapperu */
-    justify-content: center; /* Centrování obsahu ve wrapperu, pokud to flex-grow nedělá samo */
-
+    text-align: center;
+    padding: 0 20px;
+    justify-content: center;
     position: relative;
-
   }
 
   .img-bottom{
@@ -190,6 +188,7 @@ p {
 }
 .aligncenter {
     text-align:center;
+    color: #000000
 }
 .it {
     font-style:italic;
@@ -235,6 +234,21 @@ p {
 .indent-right {
     padding-right:50px;
 }
+/* Přidej obrázek s třídou .catering-lower vedle nadpisu "Catering infinito" */
+.catering-infinito-heading-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 18px; /* mezera mezi obrázkem a nadpisem */
+}
+
+.catering-lower {
+    width: 48px; /* uprav dle potřeby */
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
 .indent-bot {
     margin-bottom:20px;
 }
@@ -316,23 +330,21 @@ h2 span {
 }
 /***** menu *****/
 .menu {
-    padding:26px 10px 0 0;
-    float:right;
+    padding: 26px 10px 0 0;
+    float: right;
     display: flex;
     margin-top: 20px;
 }
 .menu li {
-    float:left;
-    padding-left:40px;
+    float: left;
+    padding-left: 40px;
     margin: 0 20px;
-
 }
 .menu li a {
-
-    line-height:18px;
-    padding:0;
-    color:#fff;
-    font-size: 25px;
+    line-height: 18px;
+    padding: 0;
+    color: #fff;
+    font-size: 18px;
 }
 .menu li a.active, .menu > li > a:hover {
     color:#c52e02;
@@ -346,6 +358,7 @@ h2 span {
     width:100%;
     min-height:122px;
     background:url(../images/row-bot-bg.jpg) center top no-repeat ;
+    
 
 
 }
@@ -392,7 +405,7 @@ h2 span {
 #content {
     width:100%;
     padding:15px 0 50px;
-    background:#f2f2f2;
+    background:#faf0f0;
     position:relative;
     z-index:1;
 }
@@ -717,7 +730,8 @@ dl span {
 footer {
     width:100%;
     padding:23px 0 30px;
-    color:#fff;
+    color:#a93939;
+    background-color: #faf0f0;
 }
 footer a {
     color:#c42e02;
@@ -755,22 +769,21 @@ h3.handwriting {
 
  /* Skrytí submenu */
  .menu .submenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: absolute;
     background-color: #fff;
     border: 1px solid #b78a8a;
     top: 100%;
-    left: 70%;
+    left: 50%;
     transform: translateX(-50%);
     width: 200px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 3000;
     text-align: center;
+    margin-top: 8px;
 }
-
+.menu > li.dropdown {
+    position: relative;
+}
 
   /* Zarovnání submenu a animace */
   .menu .dropdown:hover > .submenu {
@@ -802,7 +815,7 @@ h3.handwriting {
     padding: 8px;
     text-decoration: none;
     color: #333;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -820,7 +833,7 @@ h3.handwriting {
     padding: 10px 15px;
     color: #ffffff;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 18px;
 }
 
   /* Skrývá submenu při načtení stránky */
@@ -907,8 +920,8 @@ body#page5 {
 }
 
 .column-1 .maxheight.indent-bot {
-    background-color: transparent; 
-    padding: 0; 
+    background-color: transparent; /* Zajišťuje průhlednost tohoto obalu */
+    padding: 0; /* Odstraňuje vnitřní odsazení, které by posouvalo stín */
     margin-right: 30px; 
     box-sizing: border-box;
     border-radius: 0; 
@@ -1133,7 +1146,163 @@ body#page5 {
 
    
     
+ body, html {
+      width: 100vw;
+      min-width: 100vw;
+      background: #f7f7f7 !important;
+      background-image: none !important;
+    }
+    .main.handwriting {
+      width: 100vw;
+      max-width: 100vw;
+      background: transparent !important;
+      box-shadow: none;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .welcome-title {
+      text-align: center;
+      color: #bfa046;
+      font-size: 2.2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 0.5em;
+      margin-top: 1.5em;
+    }
+    .header2.center {
+      font-size: 4rem;
+      font-family: 'Dynalight', cursive, sans-serif;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 0.5em;
+      background: none !important;
+      box-shadow: none;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 64px;
+      width: 100vw;
+    }
+    .header2.center span {
+      display: block;
+      line-height: 1.1;
+      font-size: 4rem;
+      font-family: 'Dynalight', cursive, sans-serif;
+      font-weight: 700;
+      color: #222;
+      background: none;
+    }
+    .header2.center img {
+      height: 220px;
+      width: auto;
+      display: block;
+      background: none;
+      box-shadow: none;
+    }
+    @media (max-width: 900px) {
+      .header2.center { font-size: 2rem; gap: 24px; }
+      .header2.center img { height: 100px; }
+      .welcome-title { font-size: 1.2rem; }
+    }
+    .hero-section {
+      width: 100vw;
+      min-width: 100vw;
+      max-width: 100vw;
+      margin: 0;
+      padding: 100px 0 120px 0;
+      background: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      overflow: visible;
+    }
+    .hero-title {
+      color: #bfa046;
+      font-size: 2.0rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-align: left;
+      margin-left: 150px;
+      margin-bottom: 1.5em;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100vw;
+      max-width: 100vw;
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+    .hero-headline {
+      font-family: 'scrgunny', 'Dynalight', 'Pacifico', cursive, sans-serif;
+      font-size: 9rem;
+      color: #444;
+      font-weight: 400;
+      line-height: 1.1;
+      text-align: left;
+      margin: 0 0 0 10vw;
+      white-space: pre-line;
+      background: none;
+      z-index: 2;
+      flex: 1 1 60%;
+      letter-spacing: 1px;
+    }
+    .hero-flower {
+      height: 700px;
+      width: auto;
+      position: absolute;
+      right: 0;
+      bottom: -120px;
+      z-index: 1;
+      max-width: 900px;
+      object-fit: contain;
+      background: none;
+      box-shadow: none;
+      pointer-events: none;
+    }
+    @media (max-width: 1200px) {
+      .hero-headline { font-size: 5rem; margin-left: 4vw; }
+      .hero-flower { height: 350px; bottom: -60px; }
+      .hero-title { margin-left: 4vw; font-size: 1.5rem; }
+    }
+    @media (max-width: 900px) {
+      .hero-content { flex-direction: column; align-items: flex-start; width: 100vw; }
+      .hero-headline { font-size: 2.2rem; margin-left: 4vw; }
+      .hero-flower { height: 180px; bottom: -30px; }
+      .hero-title { margin-left: 4vw; font-size: 1.1rem; }
+    }
+    header, .row-top, .main-top, .wrapper, nav, .menu, .menu li a {
+      background: #fff !important;
+      color: #111 !important;
+    }
+    .menu li a, .menu li a.active {
+      color: #111 !important;
+    }
+    .menu li a:hover {
+      color: #bfa046 !important;
+    }
+    .hero-headline .infinito {
+      display: block;
+      margin-left: 200px;
+    }
+    
 
     
+.pdf-section, .pdf-section-inner, .text-block, .hero-section, .hero-title, .hero-headline {
+  background: #ededed !important;
+}
+
+/* Pokud je někde sekce, která má být bílá (např. kontakt), ponechám její background: #fff; */
+
+.pdf-intro-section {
+  background: #fff !important;
+}
 
     
