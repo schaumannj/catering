@@ -12,8 +12,6 @@
   <script src="js/cufon-replace.js" type="text/javascript"></script>
   <script src="js/Dynalight_400.font.js" type="text/javascript"></script>
   <script src="js/FF-cash.js" type="text/javascript"></script>
-  <script src="js/jquery.prettyPhoto.js"></script>
-  <script src="js/hover-image.js"></script>
   <style>
     header, .row-top, .main-top, .wrapper, nav, .menu, .menu li a {
       background: #ededed !important;
@@ -123,6 +121,8 @@
     </div>
   </footer>
   <script type="text/javascript">Cufon.now();</script>
+  <script src="js/jquery.prettyPhoto.js"></script>
+  <script src="js/hover-image.js"></script>
   <script>
     $(document).ready(function () {
       var $dropdown = $("li.dropdown");
@@ -154,18 +154,44 @@
         e.stopPropagation();
       });
       // Lightbox pro všechny obrázky kromě loga, dekorací a již zabalených
-      $("img:not(.logo):not(.hero-flower):not(.no-round)").each(function() {
+      $("img:not(.logo):not(.hero-flower):not(.no-round)").each(function(i) {
         var $img = $(this);
+        var src = $img.attr('src');
+        var uniqueGal = 'prettyPhoto_single_' + i;
         if ($img.parent('a.lightbox-image').length === 0) {
-          var src = $img.attr('src');
-          $img.wrap('<a class="lightbox-image" href="' + src + '" data-gal="prettyPhoto[gallery]"></a>');
+          $img.wrap('<a class=\"lightbox-image\" href="' + src + '" data-gal="' + uniqueGal + '"></a>');
+        } else {
+          $img.parent('a.lightbox-image').attr('data-gal', uniqueGal);
         }
       });
+      // Inicializace prettyPhoto s motivem 'pp_default'
       $("a.lightbox-image").prettyPhoto({
         theme: 'pp_default',
         social_tools: false,
         allow_expand: true,
-        deeplinking: false
+        deeplinking: false,
+        changepicturecallback: function() {
+          setTimeout(function() {
+            $(".pp_arrow_previous").attr('title', '').text('');
+            $(".pp_arrow_next").attr('title', '').text('');
+            $(".pp_nav").css('display', 'none');
+          }, 10);
+        },
+        callback: function() {
+          setTimeout(function() {
+            $(".pp_arrow_previous").attr('title', '').text('');
+            $(".pp_arrow_next").attr('title', '').text('');
+            $(".pp_nav").css('display', 'none');
+          }, 10);
+        }
+      });
+      // Pro jistotu přepisuji text šipek i při kliknutí na šipky
+      $(document).on('click', '.pp_arrow_previous, .pp_arrow_next', function() {
+        setTimeout(function() {
+          $(".pp_arrow_previous").attr('title', '').text('');
+          $(".pp_arrow_next").attr('title', '').text('');
+          $(".pp_nav").css('display', 'flex');
+        }, 10);
       });
     });
   </script>

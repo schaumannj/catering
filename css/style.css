@@ -1695,3 +1695,40 @@ img.hotel-img {
   object-fit: contain !important;
 }
     
+.reference-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 6px 0 4px 0;
+  font-size: 1.08em;
+  gap: 100px;
+}
+.reference-action {
+  flex: 1 1 0%;
+  min-width: 0;
+  margin-right: 32px;
+  text-align: left;
+}
+.reference-count {
+  color: #222;
+  text-align: right;
+  min-width: 110px;
+  margin-left: 32px;
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  font-size: 1.08em;
+  font-weight: normal;
+  flex-shrink: 0;
+}
+@media (max-width: 900px) {
+  .reference-list-item { gap: 32px; }
+  .reference-count { min-width: 80px; margin-left: 12px; }
+}
+@media (max-width: 700px) {
+  .reference-list-item { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .reference-count { margin-left: 0; min-width: 0; }
+}
+    
