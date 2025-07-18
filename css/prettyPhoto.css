@@ -900,3 +900,10 @@ div.ppt {
 /* ------------------------------------------------------------------------
 	Miscellaneous
 ------------------------------------------------------------------------- */
+
+.pp_close {
+  display: block !important;
+  z-index: 99999 !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}

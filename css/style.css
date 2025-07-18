@@ -1255,6 +1255,8 @@ body#page5 {
       z-index: 2;
       flex: 1 1 60%;
       letter-spacing: 1px;
+      z-index: auto !important;
+      position: static !important;
     }
     .hero-flower {
       height: 700px;
@@ -1280,8 +1282,8 @@ body#page5 {
       .hero-flower { height: 180px; bottom: -30px; }
       .hero-title { margin-left: 4vw; font-size: 1.1rem; }
     }
-    header, .row-top, .main-top, .wrapper, nav, .menu, .menu li a {
-      background: #fff !important;
+    header, .row-top, .main-top, .wrapper, nav, .main, .hero-section, .hero-content, .hero-title, .hero-headline {
+      background: #ededed !important;
       color: #111 !important;
     }
     .menu li a, .menu li a.active {
