@@ -99,8 +99,8 @@ a:hover {
 }
 
 .logo {
-  height: 120px !important;
-  max-height: 120px !important;
+  height: 200px !important;
+  max-height: 200px !important;
   width: auto !important;
   display: block;
   margin: 0;
