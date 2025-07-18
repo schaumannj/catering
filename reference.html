@@ -1,167 +1,391 @@
 <!DOCTYPE html>
 <html lang="cs">
-
-  <head>
-    <title>Catering.com | Reference</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
-    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <script src="js/cufon-yui.js" type="text/javascript"></script>
-    <script src="js/cufon-replace.js" type="text/javascript"></script>
-    <script src="js/Dynalight_400.font.js" type="text/javascript"></script>
-    <script src="js/FF-cash.js" type="text/javascript"></script>
-    <script src="js/tms-0.3.js" type="text/javascript"></script>
-    <script src="js/tms_presets.js" type="text/javascript"></script>
-    <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
-    <script src="js/jquery.equalheights.js" type="text/javascript"></script>
-
-  </head>
-
-  <body id="page5">
-
-    <header>
-      <div class="row-top">
-        <div class="main-top">
-          <div class="wrapper">
-            <img alt><a href="index.html"><img src="./foto/logo.png " alt
-                class="logo"></a><img>
-            <nav>
-              <ul class="menu">
-                <li><a href="index.html">Catering</a></li>
-
-                <li class="dropdown">
-                  <a href="#">Služby</a>
-                  <ul class="submenu">
-                    <li><a href="rauty_a_koktejly.html">Rauty a
-                        Koktejly</a></li>
-                    <li><a href="svatebni_hostiny_a_bankety.html">Svatební
-                        hostiny, Bankety</a></li>
-                    <li><a href="svatebni_agentura.html">Svatební
-                        agentura</a></li>
-                    <li><a href="firemni_akce.html">Firemní akce</a></li>
-                    <li><a href="veletrhy.html">Veletrhy</a></li>
-                    <li><a href="doprovodne_programy.html">Doprovodné
-                        programy</a></li>
-                  </ul>
-                </li>
-                <li><a class="active" href="reference.html">Reference</a></li>
-
-                <li><a href="kontakt.html">Kontakt</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-      <div class="row-bot">
-        <div class="row-bot-bg">
-          <div class="main handwriting">
-            <div class="header2 center">Reference</div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <section id="content">
-      <div class="main">
+<head>
+  <title>Catering.com | Reference</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen">
+  <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="js/cufon-yui.js" type="text/javascript"></script>
+  <script src="js/cufon-replace.js" type="text/javascript"></script>
+  <script src="js/Dynalight_400.font.js" type="text/javascript"></script>
+  <script src="js/FF-cash.js" type="text/javascript"></script>
+  <script src="js/tms-0.3.js" type="text/javascript"></script>
+  <script src="js/tms_presets.js" type="text/javascript"></script>
+  <script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+  <script src="js/jquery.equalheights.js" type="text/javascript"></script>
+  <style>
+    header, .row-top, .main-top, .wrapper, nav, .menu, .menu li a {
+      background: #ededed !important;
+      color: #111 !important;
+    }
+    /* Odstraním mezery mezi headerem a tělem */
+    body, html {
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-shadow: none;
+    }
+    header {
+      margin-bottom: 0 !important;
+      border-bottom: none !important;
+      box-shadow: none !important;
+    }
+    .row-top, .main-top, .wrapper {
+      margin-bottom: 0 !important;
+      border-bottom: none !important;
+      box-shadow: none !important;
+    }
+    .pdf-intro-section {
+      background: #fff !important;
+      margin-top: 0 !important;
+      border: none;
+      box-shadow: none;
+      padding: 60px 0 40px 0;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pdf-intro-title {
+      font-family: 'Dynalight', 'Pacifico', cursive, sans-serif;
+      color: #bfa046;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 18px;
+      margin-top: 0;
+      font-weight: 400;
+    }
+    .pdf-intro-maintext {
+      text-align: center;
+      color: #222;
+      font-size: 1.25rem;
+      margin-bottom: 18px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .pdf-intro-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 48px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+      width: 100vw;
+      max-width: 1200px;
+    }
+    .pdf-intro-contact {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 24px 32px;
+      min-width: 320px;
+      max-width: 420px;
+      text-align: left;
+      font-size: 1.1em;
+      margin-bottom: 24px;
+      margin-left: 0;
+    }
+    .pdf-intro-contact b {
+      font-size: 1.1em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .pdf-section {
+      background: #ededed;
+      padding: 60px 0 40px 0;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pdf-section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 32px;
+      padding-right: 32px;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      display: block;
+      font-size: 1.3em;
+    }
+    .pdf-section-inner h2, .pdf-section-inner h3 {
+      text-align: center;
+    }
+    .logo {
+      height: 250px !important;
+      width: auto !important;
+      display: block !important;
+    }
+    .reference-table {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      border-collapse: separate;
+      border-spacing: 0 18px;
+    }
+    .reference-row {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    .reference-year {
+      flex: 0 0 90px;
+      font-family: 'Dynalight', 'Pacifico', cursive, sans-serif;
+      color: #bfa046;
+      font-size: 1.5rem;
+      text-align: left;
+      padding-right: 24px;
+      min-width: 70px;
+      max-width: 90px;
+    }
+    .reference-content {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 64px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 4px;
+    }
+    .reference-action {
+      flex: 1 1 auto;
+      text-align: left;
+      color: #888;
+      font-size: 1.08em;
+    }
+    .reference-count {
+      flex: 0 0 90px;
+      text-align: right;
+      color: #888;
+      font-size: 1.08em;
+      letter-spacing: 1px;
+      margin-left: 24px;
+    }
+    .reference-count-number {
+      font-weight: bold;
+      color: #222;
+    }
+    .reference-count-osob {
+      font-weight: normal;
+      color: #888;
+    }
+    .reference-block {
+      margin-bottom: 36px;
+    }
+    .reference-block-title {
+      font-family: 'Dynalight', 'Pacifico', cursive, sans-serif;
+      color: #bfa046;
+      font-size: 2.7rem;
+      text-align: left;
+      margin-bottom: 8px;
+      margin-top: 0;
+      font-weight: 700;
+      position: relative;
+      border-bottom: 3px solid #bfa046;
+      padding-bottom: 6px;
+    }
+    .reference-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .reference-list-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 6px 0 4px 0;
+      font-size: 1.08em;
+      gap: 100px;
+    }
+    .reference-action {
+      color: #888;
+      text-align: left;
+      flex: 1 1 auto;
+    }
+    .reference-count {
+      color: #222;
+      text-align: right;
+      min-width: 80px;
+      margin-left: 32px;
+      letter-spacing: 1px;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      font-size: 1.08em;
+      font-weight: normal;
+    }
+    .reference-count-number {
+      font-weight: bold;
+      color: #222;
+    }
+    .reference-count-osob {
+      font-weight: normal;
+      color: #888;
+    }
+    @media (max-width: 900px) {
+      .pdf-intro-row { flex-direction: column; align-items: center; gap: 24px; }
+      .pdf-intro-contact { margin: 20px auto 24px auto; }
+    }
+    @media (max-width: 700px) {
+      .reference-list-item { flex-direction: column; align-items: flex-start; gap: 2px; }
+      .reference-count { margin-left: 0; min-width: 0; }
+    }
+  </style>
+</head>
+<body id="page-reference">
+  <header>
+    <div class="row-top">
+      <div class="main-top">
         <div class="wrapper">
-          <article class="column-1">
-            <div class="indent-left">
-              <div class="maxheight indent-bot">
-                <div class="sidebar-list-container">
-                  <h4 class="sidebar-list-title">Naše mezinárodní veletrhy
-                    2015</h4>
-                  <ul class="sidebar-list">
-                    <li>Barcelona</li>
-                    <li>Berlín</li>
-                    <li>Budapešť</li>
-                    <li>Frankfurt</li>
-                    <li>Göteborg</li>
-                    <li>Katowice</li>
-                    <li>Kolín nad Rýnem</li>
-                    <li>Londýn</li>
-                    <li>Moskva</li>
-                    <li>Paříž</li>
-                    <li>Praha</li>
-                    <li>Varšava</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="column-2">
-            <div class="maxheight indent-bot">
-              <div class="text-block">
-                <h3>Mezinárodní zkušenosti pro vaši spokojenost</h3>
-                <p>V roce 2015 jsme s hrdostí zajišťovali kompletní cateringové
-                  služby pro Slovenskou agenturu cestovního ruchu (SACR). Tato
-                  spolupráce probíhala ve spojení se společností Dynamic Group
-                  na předních mezinárodních veletrzích napříč Evropou. Naše
-                  účast na těchto akcích podtrhuje naše odhodlání poskytovat
-                  špičkové služby i v náročném mezinárodním prostředí.</p>
-                <p class="center-text">Vaše spokojenost je pro nás tou největší
-                  odměnou a zároveň naší nejlepší vizitkou!</p>
-              </div>
-
-              <div class="text-block">
-                <h3>Služby šité na míru pro nezapomenutelné zážitky</h3>
-                <p>Naše služby jsou sice univerzální, avšak vždy je šijeme na
-                  míru vašim konkrétním potřebám a představám. Máme bohaté
-                  zkušenosti s organizací nejrůznějších akcí a postaráme se o
-                  hladký průběh každé z nich – od prvního kontaktu až po samotný
-                  závěr. S námi si můžete být jisti, že vaše akce bude úspěšná a
-                  zanechá trvalý dojem.</p>
-              </div>
-
-              <div class="contact-form-container">
-                <h4>Zaujala vás naše nabídka?</h4>
-                <p class="center-text">Vyplňte náš nezávazný kontaktní formulář
-                  a my vám rádi připravíme nabídku přesně podle vašich
-                  požadavků. Společně vytvoříme nezapomenutelný zážitek, který
-                  předčí vaše očekávání!</p>
-                <form action="#" method="post">
-                  <label for="name">Jméno a příjmení:</label>
-                  <input type="text" id="name" name="name" required>
-                  <label for="email">E-mail:</label>
-                  <input type="email" id="email" name="email" required>
-                  <label for="phone">Telefonní číslo (volitelné):</label>
-                  <input type="text" id="phone" name="phone">
-                  <label for="event_type">Typ akce:</label>
-                  <input type="text" id="event_type" name="event_type"
-                    placeholder="Např. svatba, firemní večírek, veletrh">
-                  <label for="date">Předpokládané datum akce
-                    (volitelné):</label>
-                  <input type="text" id="date" name="date"
-                    placeholder="DD.MM.RRRR">
-                  <label for="message">Vaše zpráva a specifické
-                    požadavky:</label>
-                  <textarea id="message" name="message" required></textarea>
-                  <button type="submit">Odeslat nezávaznou poptávku</button>
-                </form>
-              </div>
-
-            </div>
-          </article>
-
-        </div> </div> </section>
-    <footer>
-      <div class="main">
-        <div class="aligncenter"> <span>Copyright &copy; <a
-              href="#">cateringinfinito.cz</a> All Rights Reserved</span>
-          Design by <a target="_blank"
-            href="http://www.templatemonster.com/">TemplateMonster.com</a>
+          <a href="index.html"><img src="./foto/logo.png" alt="Catering Infinito logo" class="logo"></a>
+          <nav>
+            <ul class="menu">
+              <li><a href="index.html">Catering</a></li>
+              <li class="dropdown">
+                <a href="#">Služby</a>
+                <ul class="submenu">
+                  <li><a href="rauty_a_koktejly.html">Rauty a Koktejly</a></li>
+                  <li><a href="svatebni_hostiny_a_bankety.html">Svatební hostiny, Bankety</a></li>
+                  <li><a href="svatebni_agentura.html">Svatební agentura</a></li>
+                  <li><a href="firemni_akce.html">Firemní akce</a></li>
+                  <li><a href="veletrhy.html">Veletrhy</a></li>
+                  <li><a href="doprovodne_programy.html">Doprovodné programy</a></li>
+                </ul>
+              </li>
+              <li><a class="active" href="reference.html">Reference</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+              <li><a href="#">Formulář</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
-    </footer>
-    <script type="text/javascript">Cufon.now();</script>
-    <script type="text/javascript">
-    $(window).load(function () {
-      $('.slider-wrapper, .slider').hide();
-    });
-  </script>
-
-    <script>
+    </div>
+  </header>
+  <div class="pdf-intro-section">
+    <div class="pdf-intro-title">Reference</div>
+    <div class="pdf-intro-maintext">
+      Výběr z našich referencí – realizované akce podle let.<br>
+      Kompletní seznam na vyžádání.
+    </div>
+  </div>
+  <div class="pdf-section">
+    <div class="pdf-section-inner" style="max-width:700px;">
+      <div class="reference-block">
+        <div class="reference-block-title">2015</div>
+        <ul class="reference-list">
+          <li class="reference-list-item"><span class="reference-action">SCOTT CR, s.r.o. Lanškroun</span><span class="reference-count"><span class="reference-count-number">450</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">INA Lanškroun</span><span class="reference-count"><span class="reference-count-number">500</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">UZIN, s.r.o.</span><span class="reference-count"><span class="reference-count-number">150</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Schindler spol. s r.o. Nové město na Moravě</span><span class="reference-count"><span class="reference-count-number">200</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">ProCeram Brno</span><span class="reference-count"><span class="reference-count-number">200</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">AG transport Uherské Hradiště</span><span class="reference-count"><span class="reference-count-number">250</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Šmídl, s.r.o. Žamberk</span><span class="reference-count"><span class="reference-count-number">250</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Alfa Helicopter</span><span class="reference-count"><span class="reference-count-number">100</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">ART BAZENY s.r.o. Nebovidy</span><span class="reference-count"><span class="reference-count-number">150</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Centrum pro výzkum toxických látek v prostředí RECETOX Brno</span><span class="reference-count"><span class="reference-count-number">100</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Comguard a.s. Brno</span><span class="reference-count"><span class="reference-count-number">100</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">UPC Česká republika, s.r.o. – Brno</span><span class="reference-count"><span class="reference-count-number">100</span> <span class="reference-count-osob">osob</span></span></li>
+        </ul>
+      </div>
+      <div class="reference-block">
+        <div class="reference-block-title">2014</div>
+        <ul class="reference-list">
+          <li class="reference-list-item"><span class="reference-action">Franklin Electronic, Brno</span><span class="reference-count"><span class="reference-count-number">300</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">DBK Czech s.r.o.</span><span class="reference-count"><span class="reference-count-number">450</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Vink – plasty s.r.o.</span><span class="reference-count"><span class="reference-count-number">200</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Moravia Propag</span></li>
+          <li class="reference-list-item"><span class="reference-action">Time4Fun agentura</span></li>
+          <li class="reference-list-item"><span class="reference-action">Saaten Union, Šaratice</span></li>
+          <li class="reference-list-item"><span class="reference-action">UZIN, s.r.o.</span></li>
+          <li class="reference-list-item"><span class="reference-action">Honeywell Brno</span></li>
+          <li class="reference-list-item"><span class="reference-action">Strášky, Hustý a partneři s.r.o. Brno</span><span class="reference-count"><span class="reference-count-number">150</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">IREKS ENZYMA s.r.o.</span><span class="reference-count"><span class="reference-count-number">100</span> <span class="reference-count-osob">osob</span></span></li>
+        </ul>
+      </div>
+      <div class="reference-block">
+        <div class="reference-block-title">2012</div>
+        <ul class="reference-list">
+          <li class="reference-list-item"><span class="reference-action">OVB All Finance</span><span class="reference-count"><span class="reference-count-number">1400</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">DIAMO</span><span class="reference-count"><span class="reference-count-number">120</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">LYONESS</span><span class="reference-count"><span class="reference-count-number">800</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">CARDION</span><span class="reference-count"><span class="reference-count-number">100</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">ST Sportwagen</span></li>
+          <li class="reference-list-item"><span class="reference-action">G-Agency s.r.o.</span></li>
+          <li class="reference-list-item"><span class="reference-action">Omega Optix</span></li>
+          <li class="reference-list-item"><span class="reference-action">Rodenstock</span></li>
+          <li class="reference-list-item"><span class="reference-action">Komora veterinárních lékařů ČR</span><span class="reference-count"><span class="reference-count-number">1000</span> <span class="reference-count-osob">osob</span></span></li>
+        </ul>
+      </div>
+      <div class="reference-block">
+        <div class="reference-block-title">2011</div>
+        <ul class="reference-list">
+          <li class="reference-list-item"><span class="reference-action">HP Tronics</span><span class="reference-count"><span class="reference-count-number">1000</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Zahradnický veletrh</span><span class="reference-count"><span class="reference-count-number">400</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">TS Bohemia</span><span class="reference-count"><span class="reference-count-number">2000</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Modell Brno</span></li>
+        </ul>
+      </div>
+      <div class="reference-block">
+        <div class="reference-block-title">2010</div>
+        <ul class="reference-list">
+          <li class="reference-list-item"><span class="reference-action">GW International</span><span class="reference-count"><span class="reference-count-number">400</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Honeywell</span></li>
+        </ul>
+      </div>
+      <div class="reference-block">
+        <div class="reference-block-title">2009</div>
+        <ul class="reference-list">
+          <li class="reference-list-item"><span class="reference-action">Zajištění číše vína a slavnostní večeře pořádané při příležitosti neformálního zasedání Rady ministrů EU v Jihomoravském kraji</span><span class="reference-count"><span class="reference-count-number">1000</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Magistrát města Brna</span><span class="reference-count"><span class="reference-count-number">100</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Ferrari Racing Days</span><span class="reference-count"><span class="reference-count-number">800</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Zajištění číše vína a slavnostní večeře pořádané při příležitosti neformálního zasedání Rady ministrů EU v Jihomoravském kraji</span><span class="reference-count"><span class="reference-count-number">1000</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Magistrát města Brna</span><span class="reference-count"><span class="reference-count-number">100</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Ferrari Racing Days</span><span class="reference-count"><span class="reference-count-number">800</span> <span class="reference-count-osob">osob</span></span></li>
+        </ul>
+      </div>
+      <div class="reference-block">
+        <div class="reference-block-title">2008</div>
+        <ul class="reference-list">
+          <li class="reference-list-item"><span class="reference-action">Česká spořitelna</span><span class="reference-count"><span class="reference-count-number">250</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">OVB All finance</span><span class="reference-count"><span class="reference-count-number">1200</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">HP Tronics</span><span class="reference-count"><span class="reference-count-number">1000</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">FN Bohunice</span><span class="reference-count"><span class="reference-count-number">1000</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">ING</span><span class="reference-count"><span class="reference-count-number">300</span> <span class="reference-count-osob">osob</span></span></li>
+        </ul>
+      </div>
+      <div class="reference-block">
+        <div class="reference-block-title">2002 – 2007</div>
+        <ul class="reference-list">
+          <li class="reference-list-item"><span class="reference-action">Allianz</span><span class="reference-count"><span class="reference-count-number">500</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Coca – cola</span><span class="reference-count"><span class="reference-count-number">350</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">ČSOB</span><span class="reference-count"><span class="reference-count-number">300</span> <span class="reference-count-osob">osob</span></span></li>
+          <li class="reference-list-item"><span class="reference-action">Cema production</span></li>
+          <li class="reference-list-item"><span class="reference-action">Technoparty (12x)</span></li>
+        </ul>
+      </div>
+      <div style="margin-top:24px; color:#888; font-size:0.95em; text-align:center;">...a mnoho dalších spokojených zákazníků.</div>
+    </div>
+  </div>
+  <footer>
+    <div class="main">
+      <div class="aligncenter"> <span>Copyright &copy; <a href="#">cateringinfinito.cz</a> All Rights Reserved</span>
+        Design by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a> </div>
+    </div>
+  </footer>
+  <script type="text/javascript">Cufon.now();</script>
+  <script src="js/jquery.prettyPhoto.js"></script>
+  <script src="js/hover-image.js"></script>
+  <script>
     $(document).ready(function () {
       var $dropdown = $("li.dropdown");
       $(".submenu").hide();
@@ -193,7 +417,5 @@
       });
     });
   </script>
-
-  </body>
-
+</body>
 </html>

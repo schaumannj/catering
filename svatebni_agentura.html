@@ -1,195 +1,375 @@
 <!DOCTYPE html>
 <html lang="cs">
-
-  <head>
-    <title>Catering.com | Svatební agentura</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
-    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <script src="js/cufon-yui.js" type="text/javascript"></script>
-    <script src="js/cufon-replace.js" type="text/javascript"></script>
-    <script src="js/Dynalight_400.font.js" type="text/javascript"></script>
-    <script src="js/FF-cash.js" type="text/javascript"></script>
-
-  </head>
-
-  <body id="page5">
-    <header>
-      <div class="row-top">
-        <div class="main-top">
-          <div class="wrapper">
-            <img alt><a href="index.html"><img src="./foto/logo.png " alt
-                class="logo"></a><img>
-            <nav>
-              <ul class="menu">
-                <li><a href="index.html">Catering</a></li>
-
-                <li class="dropdown">
-                  <a href="#">Služby</a>
-                  <ul class="submenu">
-                    <li><a href="rauty_a_koktejly.html">Rauty a
-                        Koktejly</a></li>
-                    <li><a href="svatebni_hostiny_a_bankety.html">Svatební
-                        hostiny, Bankety</a></li>
-                    <li><a href="svatebni_agentura.html" class="active">Svatební
-                        agentura</a></li> <li><a
-                        href="firemni_akce.html">Firemní akce</a></li>
-                    <li><a href="veletrhy.html">Veletrhy</a></li>
-                    <li><a href="doprovodne_programy.html">Doprovodné
-                        programy</a></li>
-                  </ul>
-                </li>
-
-                <li><a href="reference.html">Reference</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-      <div class="row-bot">
-        <div class="row-bot-bg">
-          <div class="main handwriting">
-            <div class="header2 center">Svatební agentura</div> </div>
-        </div>
-      </div>
-    </header>
-    <section id="content">
-      <div class="main">
+<head>
+  <title>Catering.com | Svatební agentura</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen">
+  <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="js/cufon-yui.js" type="text/javascript"></script>
+  <script src="js/cufon-replace.js" type="text/javascript"></script>
+  <script src="js/Dynalight_400.font.js" type="text/javascript"></script>
+  <script src="js/FF-cash.js" type="text/javascript"></script>
+  <script src="js/jquery.prettyPhoto.js"></script>
+  <script src="js/hover-image.js"></script>
+  <style>
+    header, .row-top, .main-top, .wrapper, nav, .menu, .menu li a {
+      background: #ededed !important;
+      color: #111 !important;
+    }
+    .menu li a, .menu li a.active {
+      color: #111 !important;
+    }
+    .menu li a:hover {
+      color: #bfa046 !important;
+    }
+    .menu .submenu {
+      background: #fff !important;
+      border-radius: 8px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      z-index: 2000 !important;
+    }
+    .menu .submenu li a {
+      background: transparent !important;
+      font-size: 14px;
+    }
+    .menu > li > a {
+      font-size: 18px;
+    }
+    #content, #content .main {
+      background: #ededed !important;
+    }
+    .pdf-intro-section {
+      background: #fff !important;
+      margin: 0 !important;
+      border: none;
+      box-shadow: none;
+      padding: 48px 0 24px 0;
+      width: 100vw;
+      max-width: 100vw;
+      border-radius: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      box-sizing: border-box;
+    }
+    @media (max-width: 900px) {
+      .pdf-intro-section {
+        max-width: 98vw;
+        padding-left: 4px;
+        padding-right: 4px;
+        border-radius: 8px;
+      }
+    }
+    .pdf-intro-section .pdf-intro-title,
+    .pdf-intro-section .pdf-intro-maintext,
+    .pdf-intro-section .wedding-circles {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .pdf-intro-section .wedding-list-title,
+    .pdf-intro-section .wedding-list {
+      max-width: 1200px;
+      margin-left: 0;
+      margin-right: auto;
+      text-align: left;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    @media (max-width: 900px) {
+      .pdf-intro-section .pdf-intro-title,
+      .pdf-intro-section .pdf-intro-maintext,
+      .pdf-intro-section .wedding-circles,
+      .pdf-intro-section .wedding-list-title,
+      .pdf-intro-section .wedding-list {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+    .pdf-intro-title {
+      font-family: 'Dynalight', 'Pacifico', cursive, sans-serif;
+      color: #bfa046;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 18px;
+      margin-top: 0;
+      font-weight: 400;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .pdf-intro-maintext {
+      text-align: center;
+      color: #222;
+      font-size: 1.25rem;
+      margin-bottom: 18px;
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .wedding-circles {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .wedding-circle-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      background: #fff;
+    }
+    .wedding-section {
+      background: #ededed;
+      padding: 60px 0 40px 0;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .wedding-section-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-left: 32px;
+      padding-right: 32px;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      display: block;
+      font-size: 1.2em;
+    }
+    .wedding-section-inner h2 {
+      font-family: 'Dynalight', 'Pacifico', cursive, sans-serif;
+      font-size: 2.2rem;
+      color: #bfa046;
+      margin: 32px 0 12px 0;
+      text-align: center;
+      font-weight: 400;
+    }
+    .wedding-section-inner p {
+      text-align: center;
+      margin-bottom: 18px;
+      color: #444;
+      font-size: 1.1em;
+      line-height: 1.7;
+    }
+    .wedding-list-title {
+      font-size: 2em;
+      color: #bfa046;
+      font-weight: bold;
+      margin: 40px 0 24px 0;
+      text-align: left;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: 0.5px;
+    }
+    .wedding-list {
+      margin: 0 auto 32px auto;
+      padding: 0;
+      list-style: none;
+      max-width: 900px;
+      text-align: left;
+      font-size: 1.35em;
+      line-height: 1.7;
+    }
+    .wedding-list li {
+      margin-bottom: 10px;
+      padding-left: 24px;
+      position: relative;
+    }
+    .wedding-list li::before {
+      content: '\2022';
+      color: #bfa046;
+      font-size: 1.2em;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .wedding-circles-bottom {
+      background: #ededed;
+      padding: 40px 0 40px 0;
+      width: 100vw;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-left: 24px;
+      margin-right: auto;
+    }
+    @media (max-width: 900px) {
+      .wedding-circles-bottom {
+        margin-left: 8px;
+      }
+    }
+    .wedding-circle-img-bottom {
+      width: 160px !important;
+      height: 160px !important;
+      min-width: 110px;
+      min-height: 110px;
+      max-width: 200px;
+      max-height: 200px;
+    }
+    @media (max-width: 900px) {
+      .wedding-circle-img-bottom {
+        width: 110px !important;
+        height: 110px !important;
+        min-width: 80px;
+        min-height: 80px;
+        max-width: 140px;
+        max-height: 140px;
+      }
+    }
+  </style>
+</head>
+<body id="page-svatebni-agentura">
+  <header>
+    <div class="row-top">
+      <div class="main-top">
         <div class="wrapper">
-          <article class="column-1">
-            <div class="indent-left">
-              <div class="maxheight indent-bot"> <div
-                  class="sidebar-list-container"> <h4
-                    class="sidebar-list-title">Co pro vás zajistíme:</h4>
-                  <p
-                    style="font-weight: bold; margin-top: 15px; margin-bottom: 10px; display: none;">Zajistíme
-                    svatbu Vašich snů od A do Z:</p>
-                  <ul class="sidebar-list">
-                    <li>osobní svatební koordinátor</li>
-                    <li>odborné konzultace a poradenství</li>
-                    <li>snubní prsteny a šperky</li>
-                    <li>svatební šaty pro nevěstu, ženicha i družičky</li>
-                    <li>svatební kytice a květinová výzdoba</li>
-                    <li>svatební dorty, cukroví a koláčky</li>
-                    <li>návrh a distribuce oznámení a pozvánek</li>
-                    <li>výběr ideálního místa pro obřad i hostinu – interiér i
-                      exteriér</li>
-                    <li>možnost svatby kdekoliv na světě</li>
-                    <li>doprava – luxusní i historická auta, převoz hostů</li>
-                    <li>návrh a realizace svatebního menu</li>
-                    <li>kompletní cateringové služby</li>
-                    <li>služby stylisty, vizážisty a kadeřníka</li>
-                    <li>hlídání dětí během svatby</li>
-                    <li>zajištění ubytování pro hosty</li>
-                    <li>profesionální fotograf a kameraman</li>
-                    <li>párty stany, mobiliář, obřadní místa</li>
-                    <li>kapela, ozvučení, osvětlení</li>
-                    <li>výzdoba prostor i aut</li>
-                    <li>zasedací pořádek a jmenovky</li>
-                    <li>balónky štěstí, ohňostroj</li>
-                    <li>dárečky a výslužky pro hosty</li>
-                    <li>návrh svatební cesty</li>
-                    <li>catering i před obřadem – třeba v domě nevěsty</li>
-                    <li>koordinace svatebních tradic a zvyků</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="column-2">
-            <div class="maxheight indent-bot">
-              <div class="text-block">
-                <h3>Svatební den bez starostí – svatba na klíč</h3>
-                <p>Váš svatební den je jedním z nejkrásnějších v životě. Víme
-                  ale, kolik starostí a stresu může jeho příprava přinést.
-                  Přenechte plánování nám – a vy si jen užijte svůj den naplno,
-                  s úsměvem, láskou a lehkostí.</p>
-
-                <p class="center-text">Oslovila vás naše nabídka?</p>
-                <p class="center-text">Vyplňte náš nezávazný <a
-                    href="reference.html">kontaktní formulář</a> a my se vám
-                  ozveme s návrhem na míru.</p>
-              </div>
-
-              <div class="content-images">
-                <img src="FOTO/svatebni_agentura/Svatebni_agentura_uvodni_1.jpg"
-                  alt="Svatební agentura 1">
-                <img src="FOTO/svatebni_agentura/Svatebni_agentura_uvodni_2.jpg"
-                  alt="Svatební agentura 2">
-                <img src="FOTO/svatebni_agentura/Svatebni_agentura_foto_1.jpg"
-                  alt="Svatební agentura 3">
-                <img src="FOTO/svatebni_agentura/Svatebni_agentura_foto_2.jpg"
-                  alt="Svatební agentura 4">
-              </div>
-            </div>
-          </article>
-
+          <a href="index.html"><img src="./foto/logo.png" alt="Catering Infinito logo" class="logo" style="height:250px;width:auto;display:block;"></a>
+          <nav>
+            <ul class="menu">
+              <li><a href="index.html">Catering</a></li>
+              <li class="dropdown active">
+                <a href="#">Služby</a>
+                <ul class="submenu" style="display:block;">
+                  <li><a href="rauty_a_koktejly.html">Rauty a Koktejly</a></li>
+                  <li><a href="svatebni_hostiny_a_bankety.html">Svatební hostiny, Bankety</a></li>
+                  <li><a href="svatebni_agentura.html">Svatební agentura</a></li>
+                  <li><a href="firemni_akce.html">Firemní akce</a></li>
+                  <li><a href="veletrhy.html">Veletrhy</a></li>
+                  <li><a href="doprovodne_programy.html">Doprovodné programy</a></li>
+                </ul>
+              </li>
+              <li><a href="reference.html">Reference</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+              <li><a href="#">Formulář</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
-    </section>
-
-    <footer>
-      <div class="main">
-        <div class="aligncenter"> <span>Copyright &copy; <a
-              href="#">cateringinfinito.cz</a> All Rights Reserved</span> Design
-          by <a target="_blank"
-            href="http://www.templatemonster.com/">TemplateMonster.com</a>
-        </div>
+    </div>
+  </header>
+  <div class="pdf-intro-section" style="max-width:100vw;overflow-x:hidden;">
+    <div class="pdf-intro-title">Svatební agentura</div>
+    <div class="pdf-intro-maintext">
+      Váš svatební den je jedním z nejkrásnějších dnů ve Vašem životě, a proto by měl být plný radosti a lásky, ne stresu. Nechte nás postarat se o všechny přípravy. Náš zkušený svatební koordinátor vám ušetří starosti a zajistí, aby vše proběhlo bez chybičky.<br><br>
+      Svatba snů na klíč.
+    </div>
+    <div class="wedding-circles">
+      <img class="wedding-circle-img" src="FOTO/svatebni_agentura/Svatebni_agentura_uvodni_1.jpg" alt="Svatební agentura 1">
+      <img class="wedding-circle-img" src="FOTO/svatebni_agentura/Svatebni_agentura_uvodni_2.jpg" alt="Svatební agentura 2">
+      <img class="wedding-circle-img" src="FOTO/svatebni_agentura/Svatebni_agentura_foto_1.jpg" alt="Svatební agentura 3">
+    </div>
+  </div>
+  <section id="content" style="max-width:100vw;overflow-x:hidden;">
+    <div class="main" style="max-width:100vw;overflow-x:hidden;">
+      <div class="wedding-list-title">Od A do Z, vše zařídíme za vás</div>
+      <ul class="wedding-list">
+        <li>Osobní svatební koordinátor</li>
+        <li>Odborné konzultace a poradenství</li>
+        <li>Snubní prsteny a šperky</li>
+        <li>Svatební šaty pro nevěstu, ženicha i družičky</li>
+        <li>Svatební kytice a květinová výzdoba</li>
+        <li>Svatební dorty, cukroví a koláčky</li>
+        <li>Návrh a distribuce oznámení a pozvánek</li>
+        <li>Výběr ideálního místa pro obřad i hostinu – interiér i exteriér</li>
+        <li>Možnost svatby kdekoliv na světě</li>
+        <li>Doprava – luxusní i historická auta, převoz hostů</li>
+        <li>Návrh a realizace svatebního menu</li>
+        <li>Kompletní cateringové služby</li>
+        <li>Služby stylisty, vizážisty a kadeřníka</li>
+        <li>Hlídání dětí během svatby</li>
+        <li>Zajištění ubytování pro hosty</li>
+        <li>Profesionální fotograf a kameraman</li>
+        <li>Párty stany, mobiliář, obřadní místa</li>
+        <li>Kapela, ozvučení, osvětlení</li>
+        <li>Výzdoba prostor i aut</li>
+        <li>Zasedací pořádek a jmenovky</li>
+        <li>Balónky štěstí, ohňostroj</li>
+        <li>Dárečky a výslužky pro hosty</li>
+        <li>Návrh svatební cesty</li>
+        <li>Catering i před obřadem – třeba v domě nevěsty</li>
+        <li>Koordinace svatebních tradic a zvyků</li>
+      </ul>
+      <div class="wedding-circles-bottom">
+        <img class="wedding-circle-img-bottom" src="FOTO/svatebni_agentura/Svatebni_agentura_uvodni_1.jpg" alt="Svatební agentura 1">
+        <img class="wedding-circle-img-bottom" src="FOTO/svatebni_agentura/Svatebni_agentura_uvodni_2.jpg" alt="Svatební agentura 2">
+        <img class="wedding-circle-img-bottom" src="FOTO/svatebni_agentura/Svatebni_agentura_foto_1.jpg" alt="Svatební agentura 3">
+        <img class="wedding-circle-img-bottom" src="FOTO/svatebni_agentura/Svatebni_agentura_foto_2.jpg" alt="Svatební agentura 4">
       </div>
-    </footer>
-    <script type="text/javascript">Cufon.now();</script>
-
-    <script>
-  $(document).ready(function() {
-    var $dropdown = $("li.dropdown");
-
-    // Skryje submenu při načtení stránky
-    $(".submenu").hide();
-
-    // Kliknutí na "Služby" zobrazí submenu
-    $dropdown.children("a").click(function(e) {
-      e.preventDefault(); // Zabrání přechodu na odkaz
-      var $parent = $(this).parent();
-
-      // Zavře všechna submenu a otevře jen aktuální
-      if (!$parent.hasClass("active")) {
-        $(".dropdown").removeClass("active").find(".submenu").stop(true, true).slideUp(200);
-        $parent.addClass("active").find(".submenu").stop(true, true).slideDown(200);
-      } else {
-        $parent.removeClass("active").find(".submenu").stop(true, true).slideUp(200);
-      }
+    </div>
+  </section>
+  <footer>
+    <div class="main">
+      <div class="aligncenter"> <span>Copyright &copy; <a href="#">cateringinfinito.cz</a> All Rights Reserved</span> Design by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a> </div>
+    </div>
+  </footer>
+  <script type="text/javascript">Cufon.now();</script>
+  <script>
+    $(document).ready(function () {
+      var $dropdown = $("li.dropdown");
+      $(".submenu").hide();
+      $dropdown.children("a").click(function (e) {
+        e.preventDefault();
+        var $parent = $(this).parent();
+        if (!$parent.hasClass("active")) {
+          $(".dropdown").removeClass("active").find(".submenu").stop(true, true).slideUp(200);
+          $parent.addClass("active").find(".submenu").stop(true, true).slideDown(200);
+        } else {
+          $parent.removeClass("active").find(".submenu").stop(true, true).slideUp(200);
+        }
+      });
+      $dropdown.mouseenter(function () {
+        $(this).addClass("active").find(".submenu").stop(true, true).slideDown(200);
+      });
+      $dropdown.mouseleave(function () {
+        if (!$(this).hasClass("clicked")) {
+          $(this).removeClass("active").find(".submenu").stop(true, true).slideUp(200);
+        }
+      });
+      $(document).click(function (e) {
+        if (!$(e.target).closest('.dropdown').length) {
+          $(".dropdown").removeClass("active").find(".submenu").stop(true, true).slideUp(200);
+        }
+      });
+      $(".submenu").click(function (e) {
+        e.stopPropagation();
+      });
+      // Lightbox pro všechny obrázky kromě loga, dekorací a již zabalených
+      $("img:not(.logo):not(.hero-flower):not(.no-round)").each(function() {
+        var $img = $(this);
+        if ($img.parent('a.lightbox-image').length === 0) {
+          var src = $img.attr('src');
+          $img.wrap('<a class="lightbox-image" href="' + src + '" data-gal="prettyPhoto[gallery]"></a>');
+        }
+      });
+      $("a.lightbox-image").prettyPhoto({
+        theme: 'light_rounded',
+        social_tools: false,
+        allow_expand: true,
+        deeplinking: false
+      });
     });
-
-    // Když myš přejede na "Služby", zobrazí submenu
-    $dropdown.mouseenter(function() {
-      $(this).addClass("active").find(".submenu").stop(true, true).slideDown(200);
-    });
-
-    // Když myš odejde, submenu se skryje
-    $dropdown.mouseleave(function() {
-      if (!$(this).hasClass("clicked")) {
-        $(this).removeClass("active").find(".submenu").stop(true, true).slideUp(200);
-      }
-    });
-
-    // Kliknutí mimo menu zavře submenu
-    $(document).click(function(e) {
-      if (!$(e.target).closest('.dropdown').length) {
-        $(".dropdown").removeClass("active").find(".submenu").stop(true, true).slideUp(200);
-      }
-    });
-
-    // Zabrání zavření, když klikneš do submenu
-    $(".submenu").click(function(e) {
-      e.stopPropagation();
-    });
-  });
-</script>
-
-  </body>
+  </script>
+</body>
 </html>

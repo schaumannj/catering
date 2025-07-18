@@ -99,9 +99,12 @@ a:hover {
 }
 
 .logo {
-    width: 100%;
-    height: 250px;
-    float: left;
+  height: 120px !important;
+  max-height: 120px !important;
+  width: auto !important;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .row-top {
@@ -121,10 +124,11 @@ margin: 0 auto;
   .wrapper{
     width: 100%;
     display: flex;
-    text-align: center;
-    padding: 0 20px;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 8px;
     position: relative;
+    flex-wrap: wrap;
   }
 
   .img-bottom{
@@ -769,17 +773,17 @@ h3.handwriting {
 
  /* Skrytí submenu */
  .menu .submenu {
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid #b78a8a;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    z-index: 3000;
-    text-align: center;
-    margin-top: 8px;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    min-width: 220px !important;
+    width: auto !important;
+    background: #fff !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    z-index: 9999 !important;
+    overflow: visible !important;
+    display: none;
 }
 .menu > li.dropdown {
     position: relative;
@@ -991,12 +995,10 @@ body#page5 {
 }
 
 .content-images img {
-    width: calc(30% - 10px); /* Dva obrázky na řádek s mezerou 20px */
-    max-width: 30%; /* Zajistí, že se obrázek nepřetáhne přes svou 50% šířku */
-    height: 250px;
-    width: 250px;
-    
-    border-radius: 25px;
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 0 !important;
 }
 
 /* Media queries pro responsivitu - aktualizováno */
@@ -1305,4 +1307,389 @@ body#page5 {
   background: #fff !important;
 }
 
+/* Kruhové obrázky pouze na stránce, ne v lightboxu */
+img:not(.logo):not(.hero-flower):not(.no-round) {
+  width: 200px !important;
+  height: 200px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  /* další styly dle potřeby */
+}
+
+/* Zrušit kruhový styl pro obrázky v prettyPhoto/lightboxu */
+div.pp_pic_holder img,
+div.pp_content_container img,
+div.pp_content img,
+div.pp_fade img {
+  border-radius: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+}
+
+.pp_pic_holder img#fullResImage {
+  border-radius: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Odstraním kolidující styly pro .content-images img */
+.content-images img {
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 0 !important;
+}
+
+/* Pro obrázky v galeriích, které mají být větší v lightboxu */
+.lightbox-image {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Výjimka pro logo a dekorace */
+img.logo, img.hero-flower, img.no-round {
+  border-radius: 0 !important;
+  aspect-ratio: unset;
+}
+
+/* Zviditelním a zvýrazním šipky v prettyPhoto lightboxu */
+.pp_pic_holder .pp_nav,
+.pp_pic_holder .pp_arrow_previous,
+.pp_pic_holder .pp_arrow_next {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-size: 2.2em !important;
+  font-weight: bold !important;
+  color: #1976d2 !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-shadow: 1px 1px 4px #fff, 0 0 2px #1976d2;
+  cursor: pointer;
+  padding: 12px 24px;
+  margin: 0 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.pp_pic_holder .pp_arrow_previous:hover,
+.pp_pic_holder .pp_arrow_next:hover {
+  background: #e3f2fd !important;
+  color: #0d47a1 !important;
+}
+
+/* Skryji popis, číslování a CLOSE, ale navigaci povoluji */
+.pp_pic_holder .pp_details,
+.pp_pic_holder .pp_description,
+.pp_pic_holder .pp_close,
+.pp_pic_holder .ppt {
+  display: none !important;
+}
+
+/* Odstranění bílého rámečku a pozadí v prettyPhoto (všechny motivy) */
+.pp_pic_holder,
+.pp_pic_holder *,
+.pp_pic_holder .pp_content,
+.pp_pic_holder .pp_top,
+.pp_pic_holder .pp_bottom,
+.pp_pic_holder .pp_content_container {
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.pp_pic_holder {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Zobrazím pouze šipky bez textu v prettyPhoto lightboxu */
+.pp_pic_holder .pp_arrow_previous,
+.pp_pic_holder .pp_arrow_next {
+  font-size: 2.8em !important;
+  font-weight: bold !important;
+  color: #1976d2 !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-shadow: 1px 1px 4px #fff, 0 0 2px #1976d2;
+  cursor: pointer;
+  padding: 12px 24px;
+  margin: 0 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  position: relative;
+  width: 1.2em;
+  height: 1.2em;
+  overflow: hidden;
+  text-indent: -9999px;
+  display: inline-block !important;
+}
+.pp_pic_holder .pp_arrow_previous::before {
+  content: '\2039'; /* Unicode šipka vlevo */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2em;
+  text-indent: 0;
+  color: #1976d2;
+}
+.pp_pic_holder .pp_arrow_next::before {
+  content: '\203A'; /* Unicode šipka vpravo */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2em;
+  text-indent: 0;
+  color: #1976d2;
+}
+.pp_pic_holder .pp_arrow_previous:hover::before,
+.pp_pic_holder .pp_arrow_next:hover::before {
+  color: #0d47a1;
+}
+
+/* Vynutím zobrazení navigace a šipek v prettyPhoto lightboxu */
+.pp_pic_holder .pp_nav {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 9999;
+  pointer-events: none;
+}
+.pp_pic_holder .pp_arrow_previous,
+.pp_pic_holder .pp_arrow_next {
+  display: inline-block !important;
+  pointer-events: auto;
+  background: none !important;
+  border: none !important;
+  font-size: 3em !important;
+  color: #1976d2 !important;
+  text-indent: -9999px;
+  width: 1.5em;
+  height: 1.5em;
+  position: relative;
+  margin: 0 24px;
+  cursor: pointer;
+}
+.pp_pic_holder .pp_arrow_previous::before {
+  content: '\2039';
+  text-indent: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5em;
+  color: #1976d2;
+}
+.pp_pic_holder .pp_arrow_next::before {
+  content: '\203A';
+  text-indent: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5em;
+  color: #1976d2;
+}
+
+@media (max-width: 900px) {
+  .logo {
+    height: 80px !important;
+    max-height: 80px !important;
+  }
+  .wrapper {
+    padding: 0 4px;
+  }
+  .menu {
+    margin-left: 4px !important;
+    gap: 4px !important;
+    font-size: 0.95em !important;
+  }
+  .menu li a, .menu li a.active {
+    padding: 4px 6px !important;
+    font-size: 0.95em !important;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2px;
+  }
+  .logo {
+    margin: 0 auto 6px auto;
+    height: 60px !important;
+    max-height: 60px !important;
+  }
+  .menu {
+    margin-left: 0 !important;
+    gap: 2px !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.9em !important;
+  }
+  .menu li a, .menu li a.active {
+    padding: 2px 4px !important;
+    font-size: 0.9em !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .pdf-intro-title, .pdf-intro-maintext, .wedding-circles {
+    max-width: 95vw !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+  body, .main, .wrapper {
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+}
+@media (max-width: 600px) {
+  .pdf-intro-title, .pdf-intro-maintext, .wedding-circles {
+    max-width: 98vw !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+  body, .main, .wrapper {
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+}
+
+/* Spodní kruhové fotky responsivita */
+.wedding-circles-bottom {
+  max-width: 98vw !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+}
+.wedding-circle-img-bottom {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #bfa046;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  background: #fff;
+  margin: 0 18px;
+}
+@media (max-width: 900px) {
+  .wedding-circle-img-bottom {
+    width: 90px;
+    height: 90px;
+    margin: 0 6px;
+  }
+}
+
+.autography-font {
+  font-family: 'Autography', cursive;
+  font-size: 4rem;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  color: #bfa046;
+}
+
+.pdf-intro-title {
+  font-size: 4rem;
+  font-family: 'Autography', cursive;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  color: #bfa046;
+}
+
+.bold {
+  font-weight: bold !important;
+  color: #222;
+}
+
+.wedding-circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 40px;
+}
+
+.wedding-circle-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #bfa046;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .autography-font, .pdf-intro-title {
+    font-size: 2.1rem;
+  }
+  .wedding-circle-img {
+    width: 90px;
+    height: 90px;
+  }
+  .wedding-circles {
+    gap: 16px;
+  }
+}
+.autography-sub {
+  font-family: 'Autography', cursive;
+  color: #bfa046;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+    
+img.hotel-img {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: none !important;
+  width: 100% !important;
+  max-width: 320px !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+    
+/* Vynuceně hranatý hotelový obrázek i proti globálním kruhovým stylům */
+.hotel-section img.hotel-img {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: none !important;
+  width: 100% !important;
+  max-width: 320px !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
     
