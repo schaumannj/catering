@@ -777,13 +777,16 @@ h3.handwriting {
     top: 100% !important;
     left: 0 !important;
     min-width: 220px !important;
-    width: auto !important;
+    width: 260px !important;
     background: #fff !important;
     border-radius: 8px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     z-index: 9999 !important;
-    overflow: visible !important;
+    overflow: hidden !important;
     display: none;
+    padding: 0;
+    list-style: none !important;
+    max-width: 90vw !important;
 }
 .menu > li.dropdown {
     position: relative;
@@ -804,27 +807,44 @@ h3.handwriting {
   /* Styl pro odkazy v submenu */
   .menu .submenu li {
     list-style: none;
-    padding: 10px;
+    padding: 0;
     border-bottom: 1px solid #030801;
-    padding: 10px;
+    margin: 0;
+    display: block;
+    width: 100%;
+    float: none;
   }
 
   .menu .submenu li:last-child {
     border-bottom: none;
-}
+  }
+  
+  /* Resetování všech float vlastností pro submenu */
+  .menu .submenu,
+  .menu .submenu li,
+  .menu .submenu li a {
+    float: none !important;
+    clear: both !important;
+  }
 
 .menu .submenu li a {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    text-align: center;
+    display: block !important;
+    width: 100% !important;
+    padding: 12px 16px !important;
+    text-decoration: none !important;
+    color: #333 !important;
+    font-size: 14px !important;
+    text-align: center !important;
+    background-color: #fff !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
 
   .menu .submenu li a:hover {
-    background-color: #f0f0f0;
+    background-color: #f5f5f5 !important;
+    color: #000 !important;
   }
 
   /* Zajištění správného rozložení menu */
@@ -1265,11 +1285,12 @@ body#page5 {
       right: 0;
       bottom: -120px;
       z-index: 1;
-      max-width: 900px;
+      max-width: 50vw;
       object-fit: contain;
       background: none;
       box-shadow: none;
       pointer-events: none;
+      transition: all 0.3s ease;
     }
     @media (max-width: 1200px) {
       .hero-headline { font-size: 5rem; margin-left: 4vw; }
@@ -1279,8 +1300,12 @@ body#page5 {
     @media (max-width: 900px) {
       .hero-content { flex-direction: column; align-items: flex-start; width: 100vw; }
       .hero-headline { font-size: 2.2rem; margin-left: 4vw; }
-      .hero-flower { height: 180px; bottom: -30px; }
+      .hero-flower { height: 120px; bottom: -20px; right: -20px; }
       .hero-title { margin-left: 4vw; font-size: 1.1rem; }
+    }
+    
+    @media (max-width: 600px) {
+      .hero-flower { display: none !important; }
     }
     header, .row-top, .main-top, .wrapper, nav, .main, .hero-section, .hero-content, .hero-title, .hero-headline {
       background: #ededed !important;
@@ -1521,6 +1546,19 @@ img.logo, img.hero-flower, img.no-round {
     padding: 4px 6px !important;
     font-size: 0.95em !important;
   }
+  
+  /* Responsive submenu pro menší obrazovky */
+  .menu .submenu {
+    width: 200px !important;
+    min-width: 180px !important;
+    right: 0 !important;
+    left: auto !important;
+  }
+  
+  .menu .submenu li a {
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+  }
 }
 @media (max-width: 600px) {
   .wrapper {
@@ -1543,6 +1581,41 @@ img.logo, img.hero-flower, img.no-round {
   .menu li a, .menu li a.active {
     padding: 2px 4px !important;
     font-size: 0.9em !important;
+  }
+  
+  /* Submenu pro velmi malé obrazovky */
+  .menu .submenu {
+    width: 180px !important;
+    min-width: 160px !important;
+    right: 0 !important;
+    left: auto !important;
+  }
+  
+  .menu .submenu li a {
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Pro velmi malé obrazovky - submenu pod položkou */
+  .menu .submenu {
+    width: 100vw !important;
+    min-width: 100vw !important;
+    right: 0 !important;
+    left: 0 !important;
+    position: fixed !important;
+    top: auto !important;
+    bottom: 0 !important;
+    border-radius: 8px 8px 0 0 !important;
+    max-height: 50vh !important;
+    overflow-y: auto !important;
+  }
+  
+  .menu .submenu li a {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    text-align: center !important;
   }
 }
 
@@ -1730,5 +1803,20 @@ img.hotel-img {
 @media (max-width: 700px) {
   .reference-list-item { flex-direction: column; align-items: flex-start; gap: 2px; }
   .reference-count { margin-left: 0; min-width: 0; }
+}
+
+/* Skrytí kytice na malých displejích */
+@media (max-width: 1354px) {
+  .hero-flower {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
 }
     
